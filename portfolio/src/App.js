@@ -1,22 +1,20 @@
 import {
   Route,
-  Switch,
+  Routes,
+  Link,
 } from 'react-router-dom';
 
-import './App.css';
-
-import landing from "./components/landing";
+import Social from './components/social';
+import Landing from "./components/landing";
 
 
 function App() {
   return (
     <>
-    <Switch>
-      <Route path="/" render={landing} />
-    </Switch>
-    <div className="App">
-      Hello! this is Raphael...
-    </div>
+      <Social />
+      <Routes>
+        <Route path="/" element={<Landing/>} />
+      </Routes>
     </>
   );
 }

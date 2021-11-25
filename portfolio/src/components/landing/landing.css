@@ -1,0 +1,40 @@
+.background { 
+    /* flexbox settings */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.disappear {
+    opacity: 0%;
+    transition: opacity .5s, visibility 0.5s linear;
+    visibility: hidden;
+}
+
+.title {
+    color: white;
+    font-size: 15vw;
+}
+
+.button {
+    background: none;
+    border: solid 3px lightgreen;
+    border-radius: 5px;
+    color: white;
+    padding: 30px;
+
+    
+}
+.button:hover {
+    color: greenyellow;
+    border: dashed 3px greenyellow; 
+}
