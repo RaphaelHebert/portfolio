@@ -1,15 +1,3 @@
-.parentLanding { 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center; 
-    align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
 .childLanding {
     z-index: 1;
     order: 3;
@@ -23,13 +11,10 @@
     transition: opacity .5s linear;
 }
 
-.title {
-    order: 1;
-    z-index: 2;
-    color: white;
-    font-size: 15vw;
-    margin: 0;
-    transition: opacity .5s linear;
+.disappear {
+    opacity: 0;
+    transition: opacity .7s, visibility .5s linear;
+    visibility: hidden;
 }
 
 .enterButton {
@@ -42,11 +27,33 @@
     padding: 30px;
 }
 
-.disappear {
-    opacity: 0;
-    transition: opacity .7s, visibility .5s linear;
-    visibility: hidden;
+.parentLanding { 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
+
+.title {
+    order: 1;
+    z-index: 2;
+    color: white;
+    font-size: 15vw;
+    margin: 0;
+    transition: opacity .5s linear;
+}
+
+
+/* 
+#############################################
+hover
+#############################################
+*/
 
 .enterButton:hover {
     cursor: pointer;
