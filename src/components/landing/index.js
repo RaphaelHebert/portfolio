@@ -1,5 +1,5 @@
 import Cover from "./Cover";
-import Projects from "../projects";
+import Projects from "../projectsList";
 
 
 const Landing = () => {
@@ -7,6 +7,7 @@ const Landing = () => {
     return (
         <>
             <Cover />
+            <Projects />
         </>
     )
 }
