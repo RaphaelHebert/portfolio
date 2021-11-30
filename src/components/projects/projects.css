@@ -4,6 +4,16 @@
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background: lightgray;
     padding: 20px;
+}
+
+aside {
+    width: 30%;
+    padding: 15px;
+    border-left: solid 1px lightgray;
+}
+
+article {
+    max-width: 60%;
+    padding: 15px;
 }

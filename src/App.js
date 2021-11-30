@@ -4,8 +4,9 @@ import {
   Link,
 } from 'react-router-dom';
 
-import Social from './components/social';
+import Social from "./components/social";
 import Landing from "./components/landing";
+import NSDPY from "./components/projects/NSDPY";
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
       <Social />
       <Routes>
         <Route path="/" element={<Landing/>} />
+        <Route path="projects" >
+          <Route path="NSDPY" element={<NSDPY />} />
+        </Route>
       </Routes>
     </>
   );
