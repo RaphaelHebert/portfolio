@@ -43,7 +43,13 @@ const NSDPY = () => {
                     <h1>{project.name}</h1>
                     <p>Nucleotides Sequences Downloader with Python</p>
                 </div>
-                
+                <div className="logos">
+                    {images.map( img => {
+                        return(
+                            <img src={img} alt="logo" width="100px"/>
+                        )            
+                    })}
+                </div>
                 <section className="logos">
                     <article>
                         My first "professional" achievement with Python3... I wrote this script during a voluntary internship. 
@@ -56,17 +62,10 @@ const NSDPY = () => {
                         paper has been submitted to the <a href="https://www.journals.elsevier.com/softwarex">softwareX journal</a>.. waiting for approval..
                     </article>
                     <aside>
+                        <h2>NSDPY workflow</h2>
                         <img src="https://raw.githubusercontent.com/RaphaelHebert/nsdpy/main/workflow.png" alt="NSDPY workflow" width="100%"/>
                     </aside>
                 </section>
-                <div className="logos">
-                    {images.map( img => {
-                        return(
-                            <img src={img} alt="logo" width="100px"/>
-                        )            
-                    })}
-                </div>
-
             </>:
             // TODO: put a spinner
             <p>Loading project...</p>
