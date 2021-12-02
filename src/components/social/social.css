@@ -4,6 +4,10 @@
     justify-content: space-evenly;
 }
 
+.footer {
+    border-top: solid 2px grey;
+}
+
 .navList {
     list-style-type: none;
     padding-left: 0;

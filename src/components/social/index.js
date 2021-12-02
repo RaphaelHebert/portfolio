@@ -8,7 +8,7 @@ import linkedin from './logos/linkedin.png'
 
 const Social = () => {
     return (
-        <footer>
+        <footer className="footer">
             <nav>
                 <ul className="flexboxRow navList">
                 {/* TODO: make logo size responsive? */}
