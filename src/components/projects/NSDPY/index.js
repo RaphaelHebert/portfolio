@@ -49,14 +49,14 @@ const NSDPY = () => {
                         My first "professional" achievement with Python3... I wrote this script during a voluntary internship. 
                         NSDPY aims to ease the work of people who need to download big batches of DNA sequences such as biologists or geneticist..
                         It can automatize batch downloading from the <a href="https://www.ncbi.nlm.nih.gov/" >NCBI</a> databases and then filter 
-                        and sort the downloaded sequences according to their taxonomy. /n NCBI is available on GitHub or can be installed as a package
+                        and sort the downloaded sequences according to their taxonomy. /n NCBI is available on <a href="https://github.com/RaphaelHebert/nsdpy">GitHub</a> or can be installed as a package
                         from the <a href="https://pypi.org/project/nsdpy/">PyPI</a> website to be used directly in the terminal and included in a pipeline.
                         It is also available on <a href="https://colab.research.google.com/drive/1UmxzRc_k5sNeQ2RPGe29nWR_1_0FRPkq" >Google Colab</a>.
                         The documentation is available on <a href="https://nsdpy.readthedocs.io/en/latest/">readTheDocs</a> and a
                         paper has been submitted to the <a href="https://www.journals.elsevier.com/softwarex">softwareX journal</a>.. waiting for approval..
                     </article>
                     <aside>
-                        pic or something
+                        <img src="https://raw.githubusercontent.com/RaphaelHebert/nsdpy/main/workflow.png" alt="NSDPY workflow" width="100%"/>
                     </aside>
                 </section>
                 <div className="logos">
@@ -70,7 +70,6 @@ const NSDPY = () => {
             </>:
             // TODO: put a spinner
             <p>Loading project...</p>
-
         }
         </>
     )

@@ -61,12 +61,7 @@ hover
     border: dashed 3px greenyellow; 
 }
 
-.enterButton:hover + .title {
+.enterButton:hover ~ .title, .enterButton:hover ~ .childLanding{
     opacity: .8;
     transition: opacity .5s linear;
 } 
-
-.enterButton:hover ~ .childLanding {
-    opacity: .8;
-    transition: opacity .5s linear;
-}
