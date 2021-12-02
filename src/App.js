@@ -12,13 +12,13 @@ import NSDPY from "./components/projects/NSDPY";
 function App() {
   return (
     <>
-      <Social />
       <Routes>
         <Route path="/" element={<Landing/>} />
         <Route path="projects" >
           <Route path="NSDPY" element={<NSDPY />} />
         </Route>
       </Routes>
+      <Social />
     </>
   );
 }
