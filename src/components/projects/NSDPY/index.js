@@ -53,7 +53,7 @@ const NSDPY = () => {
                 <section className="logos">
                     <article>
                         My first "professional" achievement with Python3... I wrote this script during a voluntary internship. 
-                        NSDPY aims to ease the work of people who need to download big batches of DNA sequences such as biologists or geneticist..
+                        NSDPY aims to ease the work of the people who need to download big batches of DNA sequences such as biologists or geneticist..
                         It can automatize batch downloading from the <a href="https://www.ncbi.nlm.nih.gov/" >NCBI</a> databases and then filter 
                         and sort the downloaded sequences according to their taxonomy. /n NCBI is available on <a href="https://github.com/RaphaelHebert/nsdpy">GitHub</a> or can be installed as a package
                         from the <a href="https://pypi.org/project/nsdpy/">PyPI</a> website to be used directly in the terminal and included in a pipeline.
