@@ -8,10 +8,13 @@ import Social from "./components/social";
 import Landing from "./components/landing";
 import NSDPY from "./components/projects/NSDPY";
 
+import './mainPage.css'
 
 function App() {
   return (
-    <>
+    // TODO: is it better to wrap it here with the pageClass div (relative position) or in the dic in index.html?
+    // this is to make the cover element (absolute position) appear on the top of all the other elements
+    <div className="pageClass">
       <Routes>
         <Route path="/" element={<Landing/>} />
         <Route path="projects" >
@@ -19,7 +22,7 @@ function App() {
         </Route>
       </Routes>
       <Social />
-    </>
+    </div>
   );
 }
 
