@@ -6,7 +6,6 @@ import Projects from "../projectsList";
 
 
 const Landing = props => {
-    
     return (
         <>
             {props.firstVisit && <Cover />}
