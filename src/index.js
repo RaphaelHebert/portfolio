@@ -1,16 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//create a reducer here for now
+// TODO: move the reducer to its own folder and import it
+const reducer = () => {
+  return(
+    {
+      firstVisit: true
+    }
+  )
+};
+
+// create redux store
+const store = createStore(reducer)
+
 ReactDOM.render(
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
