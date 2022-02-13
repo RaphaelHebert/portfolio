@@ -15,6 +15,7 @@
     opacity: 0;
     transition: opacity .7s, visibility .5s linear;
     visibility: hidden;
+    display: none;
 }
 
 .enterButton {
