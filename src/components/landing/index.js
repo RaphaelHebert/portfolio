@@ -1,16 +1,26 @@
+import { connect } from 'react-redux'
+
+
 import Cover from "./Cover";
 import Projects from "../projectsList";
 
 
-const Landing = () => {
+const Landing = props => {
     
     return (
         <>
-            <Cover />
+            {props.firstVisit && <Cover />}
             <Projects />
         </>
     )
 }
 
-export default Landing;
+const MapStatesToProps = state => {
+    return(
+        {
+            firstVisit: state.firstVisit,
+        }
+    )
+};
+export default connect(MapStatesToProps, [])(Landing);
 
