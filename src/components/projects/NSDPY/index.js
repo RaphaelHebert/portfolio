@@ -63,8 +63,7 @@ const NSDPY = () => {
                     </article>
                     <aside>
                         <h2>NSDPY workflow</h2>
-                        <img src="https://raw.githubusercontent.com/RaphaelHebert/nsdpy/main/workflow.png" alt="NSDPY workflow" width="100%"/>
-                    </aside>
+                        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRD4h7l0S57op_4j-5xsz8iv1j1XBliw-jEdtnWOIq-JAU2l8kSV6d1NmkHd5Q4zhUmZCA3SHUSuHJw/pub?w=801&amp;h=744"/>                    </aside>
                 </section>
             </>:
             // TODO: put a spinner

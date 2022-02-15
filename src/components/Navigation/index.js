@@ -49,10 +49,10 @@ const Navigation = () => {
         }}
       >
         <MenuItem id="NSDPY" className="customItem" onClick={handleClose}>PiPy Package</MenuItem>
-        <MenuItem className="customItem" onClick={handleClose}>Data science</MenuItem>
-        <MenuItem className="customItem" onClick={handleClose}>CodePens</MenuItem>
-        <MenuItem className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
-        <MenuItem className="customItem" onClick={handleClose}>Web Dev - React</MenuItem>
+        <MenuItem id="TamGiang" className="customItem" onClick={handleClose}>Data science</MenuItem>
+        <MenuItem id="codepens" className="customItem" onClick={handleClose}>CodePens</MenuItem>
+        <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
+        <MenuItem id="react" className="customItem" onClick={handleClose}>Web Dev - React</MenuItem>
       </Menu>
     </div>
   );
