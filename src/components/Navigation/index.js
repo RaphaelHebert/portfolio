@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useNavigate, NavLink } from "react-router-dom";
+
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import "./navigation.css"
 
 const Navigation = () => {
+  const navigate = useNavigate()
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -13,9 +16,15 @@ const Navigation = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (event) => {
     setAnchorEl(null);
   };
+
+  const navigation = (event) => {
+    console.log("ok")
+    console.log(event.target.id)
+    navigate(`/projects/${event.target.id}`, {replace: true});
+  }
 
   return (
     <div className="navDiv">
@@ -34,11 +43,12 @@ const Navigation = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        onClick={navigation}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem className="customItem" onClick={handleClose}>PyPI package</MenuItem>
+        <MenuItem id="NSDPY" className="customItem" onClick={handleClose}>PiPy Package</MenuItem>
         <MenuItem className="customItem" onClick={handleClose}>Data science</MenuItem>
         <MenuItem className="customItem" onClick={handleClose}>CodePens</MenuItem>
         <MenuItem className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
