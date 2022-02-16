@@ -18,7 +18,7 @@ const projectsList = [
         type: "others",
     },
     {
-        name: "Microplastics in Tam Giang",
+        name: "TamGiang",
         img: "",
         link: "https://colab.research.google.com/drive/11wadYnU2DAV5y3gLCjAtFfE4f5IojN4W?usp=sharing",
         github: "",

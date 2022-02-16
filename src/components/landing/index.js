@@ -2,11 +2,11 @@ import Cover from "./Cover";
 import Projects from "../projectsList";
 
 
-const Landing = () => {
-    
+const Landing = ({ firstVisit, setFirstVisit }) => {
+
     return (
         <>
-            <Cover />
+            { firstVisit && <Cover  setFirstVisit={setFirstVisit}/>}
             <Projects />
         </>
     )

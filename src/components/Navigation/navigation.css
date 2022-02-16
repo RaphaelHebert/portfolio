@@ -1,0 +1,25 @@
+.navDiv {
+    position: fixed;
+    top: 50px;
+    left: 7%;
+}
+
+#basic-button {
+    color: black;
+    background: #e7e7e7;
+    border: 2px dashed #f99e00;
+    border-radius: 10px;
+    Padding: 20%;
+}
+
+#basic-button:hover {
+    color: #b4b4b4;
+    background: white;
+}
+
+#basic-menu .customItem{
+    border-bottom: 1px dashed #f99e00;
+}
+#basic-menu .customItem:last-of-type{
+    border-bottom: none;
+}
