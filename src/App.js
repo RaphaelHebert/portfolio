@@ -10,7 +10,8 @@ import useLocalStorage from "./hooks/useLocalStorage"
 import Social from "./components/social";
 import Landing from "./components/landing";
 import NSDPY from "./components/projects/NSDPY";
-import TamGiang from "./components/projects/TamGiang"
+import TamGiang from "./components/projects/TamGiang";
+import CodePen from "./components/projects/CodePen";
 
 import './mainPage.css'
 import Navigation from './components/Navigation'
@@ -30,8 +31,7 @@ function App() {
         <Route path="projects" >
           <Route path="NSDPY" element={<NSDPY />} />
           <Route path="TamGiang" element={<TamGiang />} />
-
-
+           <Route path="CodePen" element={<CodePen />} />
         </Route>
       </Routes>
       <Social />

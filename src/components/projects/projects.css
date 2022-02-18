@@ -19,8 +19,34 @@ article {
 }
 
 .asideImages {
-    display: flexbox;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     justify-items: center;
+}
+
+.pens{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.flexRow{
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.flexCol{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.contentStretch {
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.viewportHeight{
+    height: 50vh;
 }
