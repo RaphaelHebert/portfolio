@@ -1,5 +1,8 @@
 import Cover from "./Cover";
 import Projects from "../projectsList";
+import Intro from "./Intro"
+
+import './landing.css'
 
 
 const Landing = ({ firstVisit, setFirstVisit }) => {
@@ -7,7 +10,11 @@ const Landing = ({ firstVisit, setFirstVisit }) => {
     return (
         <>
             { firstVisit && <Cover  setFirstVisit={setFirstVisit}/>}
-            <Projects />
+            <div className="flexColNoWrap">
+                <Intro />
+                <Projects />
+            </div>
+           
         </>
     )
 }

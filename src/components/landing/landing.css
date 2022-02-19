@@ -28,6 +28,13 @@
     padding: 30px;
 }
 
+.intro {
+    padding: 20px;
+    padding-left: 20%;
+    font-family: 'Roboto Mono', monospace;
+    background: lightcyan;
+}
+
 .parentLanding { 
     position: fixed;
     top: 0;
@@ -66,3 +73,14 @@ hover
     opacity: .8;
     transition: opacity .5s linear;
 } 
+
+/* 
+#############################################
+flexbox
+#############################################
+*/
+
+.flexColNoWrap {
+    display: column nowrap;
+    justify-content: stretch;
+}
