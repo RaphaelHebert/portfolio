@@ -14,10 +14,11 @@ import TamGiang from "./components/projects/TamGiang";
 import CodePen from "./components/projects/CodePen";
 import Flask from "./components/projects/Flask";
 
-import './mainPage.css';
 import Navigation from './components/Navigation';
- 
-function App() {
+import './app.css';
+
+
+const App = () => {
 
   const [ firstVisit, setFirstVisit ] = useLocalStorage("firstVisit", true) 
   useEffect(() => setFirstVisit(true),[])

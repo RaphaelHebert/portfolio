@@ -1,24 +1,29 @@
 .navDiv {
-    position: fixed;
-    top: 50px;
-    left: 7%;
+    position: absolute;
+    top: 3%;
+    left: 5%;
 }
 
 #basic-button {
-    color: black;
-    background: #e7e7e7;
-    border: 2px dashed #f99e00;
+    background: #cbe1f0;
+    border: solid 3px grey;
     border-radius: 10px;
-    Padding: 20%;
+    color: #9e8d4f;
+    font-family: 'Roboto Mono', monospace;
+    font-size: calc(1vw + 3px);
+    Padding: 30%;
+
 }
 
 #basic-button:hover {
-    color: #b4b4b4;
-    background: white;
+    border: solid 3px #9e8d4f;
+    color: #E8E2CD;
+    background: #617C91;
+    font-weight: bold; 
 }
 
 #basic-menu .customItem{
-    border-bottom: 1px dashed #f99e00;
+    border-bottom: 1px dashed #9e8d4f;
 }
 #basic-menu .customItem:last-of-type{
     border-bottom: none;

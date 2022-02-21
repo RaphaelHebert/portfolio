@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import "./navigation.css"
+import "../../app.css"
 
 const Navigation = () => {
   const navigate = useNavigate()
@@ -25,7 +26,7 @@ const Navigation = () => {
   }
 
   return (
-    <div className="navDiv">
+    <div className="navDiv main">
       <Button
         className="navButton"
         id="basic-button"
