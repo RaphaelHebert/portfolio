@@ -21,9 +21,7 @@ const Navigation = () => {
   };
 
   const navigation = (event) => {
-    console.log("ok")
-    console.log(event.target.id)
-    navigate(`/projects/${event.target.id}`, {replace: true});
+    event.id? navigate(`/projects/${event.target.id}`, {replace: true}): navigate('/', {replace: true})
   }
 
   return (
@@ -48,6 +46,7 @@ const Navigation = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
+        <MenuItem id="" className="customItem" onClick={handleClose}>Home</MenuItem>
         <MenuItem id="NSDPY" className="customItem" onClick={handleClose}>PiPy Package</MenuItem>
         <MenuItem id="TamGiang" className="customItem" onClick={handleClose}>Data science</MenuItem>
         <MenuItem id="CodePen" className="customItem" onClick={handleClose}>CodePens</MenuItem>

@@ -36,7 +36,7 @@ const CodePen = () => {
                     })}
                 </div>
                 <section className="logos">
-                    <div classNmae="flexCol contentStretch">
+                    <div className="flexCol contentStretch">
                         <div className="flexRow contentStretch">
                             <article>
                             Some practice of HTML5, CSS3 and JavaScript..

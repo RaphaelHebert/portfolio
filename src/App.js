@@ -12,9 +12,10 @@ import Landing from "./components/landing";
 import NSDPY from "./components/projects/NSDPY";
 import TamGiang from "./components/projects/TamGiang";
 import CodePen from "./components/projects/CodePen";
+import Flask from "./components/projects/Flask";
 
-import './mainPage.css'
-import Navigation from './components/Navigation'
+import './mainPage.css';
+import Navigation from './components/Navigation';
  
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
         <Route path="projects" >
           <Route path="NSDPY" element={<NSDPY />} />
           <Route path="TamGiang" element={<TamGiang />} />
-           <Route path="CodePen" element={<CodePen />} />
+          <Route path="CodePen" element={<CodePen />} />
+          <Route path="Flask" element={<Flask />} />
         </Route>
       </Routes>
       <Social />

@@ -1,12 +1,14 @@
 .project {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
+    flex-flow: column nowrap;
+    justify-content:center;
     border: solid 3px grey;
+    border-radius: 10px;
     margin: 20px;
     padding: 10px;
+    max-width: 25%;
+    min-width: 20%;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .project div {
@@ -17,7 +19,29 @@
 }
 
 .project img {
-    width: max(200px, 30%);
+    width: 100%;
 }
 
+.projectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
 
+/* 
+#################################
+hover
+#################################
+*/
+
+.project:hover {
+    border: solid 5px lightcoral;
+    background: grey;
+    color: white;
+    
+}
+
+.project:hover img {
+   opacity: 70%;
+}

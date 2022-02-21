@@ -3,31 +3,32 @@ import { Link } from "react-router-dom";
 import projectsList from "./projectsList.js";
 //style
 import './projects.css';
-//image
-import testImg from './images/try.png'
 
 
 const Projects = () => {
     return (
         <>
-        {
-            projectsList? projectsList.map(project => {
-                return(
-                    <Link to={`projects/${project.name}`}>
+            <div className="projectsContainer">
+            {
+                projectsList? projectsList.map(project => {
+                    return(
                         <div className="project" >
-                            <div>
-                                <h2>{project.name}</h2>
-                                <p>{project.description}</p>
-                            </div>
-                            {/* TODO: setup min width */}
-                            <img alt={`${ project.name} image`} src={testImg}/>
+                            <Link to={`projects/${project.name}`} style={{textDecoration: 'none', color: "inherit"}}>
+                                <div>
+                                    <h2>{project.name}</h2>
+                                    <p>{project.description}</p>
+                                </div>
+                                {project.name === "CodePen"? project.img : 
+                                <img alt={`${project.name} image`} src={project.img}/>}
+                            </Link>
                         </div>
-                    </Link>
-                )
-            }):
-            <p>No project to display</p>
+                    )
+                }):
+                <p>No project to display</p>
 
-        }
+            }
+            </div>
+       
         </>
     )
 }

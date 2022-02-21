@@ -1,6 +1,9 @@
 import { useState } from "react";
 
+import Social from '../social'
+
 import "./landing.css"
+
 
 
 const Cover = ({ setFirstVisit }) => {
@@ -16,6 +19,9 @@ const Cover = ({ setFirstVisit }) => {
             <button className="enterButton" onClick={() => handleClick()}>Come in!</button>
             <h1 className="title">Welcome !</h1>
             <div className="childLanding" />
+            <div className="social">
+                <Social />
+            </div>
         </div> 
     )
 }
