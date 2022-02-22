@@ -25,6 +25,7 @@
 #basic-menu .customItem{
     border-bottom: 1px dashed #9e8d4f;
 }
+
 #basic-menu .customItem:last-of-type{
     border-bottom: none;
 }

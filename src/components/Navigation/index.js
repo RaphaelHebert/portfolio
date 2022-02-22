@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -8,6 +8,7 @@ import "./navigation.css"
 import "../../app.css"
 
 const Navigation = () => {
+
   const navigate = useNavigate()
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -21,8 +22,8 @@ const Navigation = () => {
     setAnchorEl(null);
   };
 
-  const navigation = (event) => {
-    event.id? navigate(`/projects/${event.target.id}`, {replace: true}): navigate('/', {replace: true})
+  const nav = (event) => {
+    event.target.id? navigate(`/projects/${event.target.id}`, {replace: true}): navigate('/', {replace: true})
   }
 
   return (
@@ -42,7 +43,7 @@ const Navigation = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        onClick={navigation}
+        onClick={nav}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
