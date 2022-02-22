@@ -3,7 +3,7 @@
     order: 3;
     background: black;
     position: absolute;
-    opacity: .9;
+    opacity: .95;
     top: 0;
     bottom: 0;
     left: 0;
@@ -22,17 +22,11 @@
     z-index: 2;
     order: 2;
     background: none;
-    border: solid 3px lightgreen;
+    border: solid 3px #ffb028;
     border-radius: 5px;
-    color: lightgreen;
-    padding: 30px;
-}
-
-.intro {
-    padding: 20px;
-    padding-left: 20%;
-    font-family: 'Roboto Mono', monospace;
-    background: lightcyan;
+    color: #ffb028;
+    padding: 5vh 5vw;
+    font-size: calc(1.2vw + 3px);
 }
 
 .parentLanding { 
@@ -43,17 +37,8 @@
     right: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center;
-}
-
-.title {
-    order: 1;
-    z-index: 2;
-    color: white;
-    font-size: 15vw;
-    margin: 0;
-    transition: opacity .5s linear;
 }
 
 .social {
@@ -62,12 +47,20 @@
     order: 4;
     border-radius: 5%;
     opacity: 100%;
-    background: rgb(165, 165, 165);
+    background: #E8E2CD;
     opacity: 70%;
-    position: absolute;
-    top: 85%;
+    margin-top: 5%;
 }
 
+
+.title {
+    order: 1;
+    z-index: 2;
+    color: #E8E2CD;
+    font-size: 15vw;
+    margin: 0;
+    transition: opacity .5s linear;
+}
 
 /* 
 #############################################
@@ -77,8 +70,8 @@ hover
 
 .enterButton:hover {
     cursor: pointer;
-    color: greenyellow;
-    border: dashed 3px greenyellow; 
+    color: #ffc96c;
+    border: dashed 3px #ffc96c; 
 }
 
 .enterButton:hover ~ .title, .enterButton:hover ~ .childLanding{

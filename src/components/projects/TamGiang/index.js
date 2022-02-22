@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
 
+import Intro from '../../intro'
 import ird from "./img/logos/ird.png"
 import danangUniversity from './img/logos/danangUniversity.png'
 import avgLength from './img/tamGiangAvgLength.png';
@@ -31,10 +32,7 @@ const TamGiang = () => {
         {
             project?
             <>
-                <div className="logos">
-                    <h1>{project.name}</h1>
-                    <p>Microplastic in TamGiang lagoons</p>
-                </div>
+                <Intro project={project} />
                 <div className="logos">
                     {images.map( img => {
                         return(

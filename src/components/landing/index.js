@@ -3,13 +3,14 @@ import Projects from "../projectsList";
 import Intro from "./Intro"
 
 import './landing.css'
+import '../../app.css'
 
 
 const Landing = ({ firstVisit, setFirstVisit }) => {
 
     return (
         <>
-            { firstVisit && <Cover  setFirstVisit={setFirstVisit}/>}
+            { firstVisit && <Cover setFirstVisit={setFirstVisit}/>}
             <div className="flexColNoWrap">
                 <Intro />
                 <Projects />

@@ -5,7 +5,18 @@ import TamGiang from '../projects/TamGiang/img/tamGiangSizeClassFrequencies.png'
 
 const projectsList = [
     {
+        name: "Limtiless posssibilities",
+        catchphrase: "I love building useful things and use the technology to improve people's life.",
+        img: "",
+        link: "",
+        github: "",
+        description: "",
+        languages: ["Python"],
+        type: "page",
+    },
+    {
         name: "NSDPY",
+        catchphrase: "Making bioinformaticians life easier.",
         img: pipy,
         link: "https://pypi.org/project/nsdpy/",
         github: "https://github.com/RaphaelHebert/nsdpy",
@@ -15,6 +26,7 @@ const projectsList = [
     },
     {
         name: "CodePen",
+        catchphrase: "Practice makes it perfect",
         img: <CodePenLogo />,
         link: "https://codepen.io/raphaelhebert-the-scripter",
         github: "",
@@ -24,6 +36,7 @@ const projectsList = [
     },
     {
         name: "TamGiang",
+        catchphrase: "Getting knowledge from data",
         img: TamGiang,
         link: "https://colab.research.google.com/drive/11wadYnU2DAV5y3gLCjAtFfE4f5IojN4W?usp=sharing",
         github: "",
@@ -33,6 +46,7 @@ const projectsList = [
     },
     {
         name: "Flask",
+        catchphrase: "My first website",
         img: promission,
         link: "https://promissions.herokuapp.com/login", 
         github: "https://github.com/RaphaelHebert/promission",

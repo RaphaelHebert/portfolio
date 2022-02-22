@@ -1,0 +1,19 @@
+.main {
+    background: #617C91;
+    /* color: #E0D5C5;  */
+    color: #E8E2CD;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.intro {
+    width: 100 vw;
+    margin: none;
+    padding: 20px;
+    padding-left: 20%;
+}
+
+.pageClass {
+    position: relative;
+    margin: none;
+    padding: none;
+}
