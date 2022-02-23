@@ -27,7 +27,6 @@ const App = () => {
     // TODO: is it better to wrap it here with the pageClass div (relative position) or in the dic in index.html?
     // this is to make the cover element (absolute position) appear on the top of all the other elements
     <div className="pageClass">
-      {!firstVisit && <Navigation/>}
       <Routes>
         <Route path="/" element={<Landing firstVisit={firstVisit} setFirstVisit={setFirstVisit}/>} />
         <Route path="projects" >

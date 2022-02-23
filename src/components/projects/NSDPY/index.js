@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
+import Intro from '../../intro'
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
+import "../../../app.css"
 
 //images
 import pipy from './img/pypi.png';
@@ -38,11 +40,8 @@ const NSDPY = () => {
         <>
         {
             project?
-            <>
-                <div className="logos">
-                    <h1>{project.name}</h1>
-                    <p>Nucleotides Sequences Downloader with Python</p>
-                </div>
+            <div className="flexColNoWrap main">
+                <Intro project={project} />
                 <div className="logos">
                     {images.map( img => {
                         return(
@@ -65,7 +64,7 @@ const NSDPY = () => {
                         <h2>NSDPY workflow</h2>
                         <img src="https://docs.google.com/drawings/d/e/2PACX-1vRD4h7l0S57op_4j-5xsz8iv1j1XBliw-jEdtnWOIq-JAU2l8kSV6d1NmkHd5Q4zhUmZCA3SHUSuHJw/pub?w=801&amp;h=744"/>                    </aside>
                 </section>
-            </>:
+            </div>:
             // TODO: put a spinner
             <p>Loading project...</p>
         }

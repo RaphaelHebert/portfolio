@@ -11,8 +11,7 @@
     color: #9e8d4f;
     font-family: 'Roboto Mono', monospace;
     font-size: calc(1vw + 3px);
-    Padding: 30%;
-
+    padding: 8vh 4vw;
 }
 
 #basic-button:hover {

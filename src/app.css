@@ -1,3 +1,21 @@
+.flexRowNoWrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.intro {
+    width: 100 vw;
+}
+
+.item1{
+    flex-grow: 1;
+}
+
+.item5{
+    flex-grow:5;
+}
+
 .main {
     background: #617C91;
     /* color: #E0D5C5;  */
@@ -5,14 +23,12 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-.intro {
-    width: 100 vw;
-    margin: none;
-    padding: 20px;
-    padding-left: 20%;
+.marginLeft{
+    margin-left: 5%;
 }
 
 .pageClass {
+    width: 100vw;
     position: relative;
     margin: none;
     padding: none;

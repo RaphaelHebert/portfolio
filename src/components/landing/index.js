@@ -1,18 +1,23 @@
 import Cover from "./Cover";
 import Projects from "../projectsList";
-import Intro from "./Intro"
+import projectsList from "../projectsList/projectsList";
+import Intro from "../intro"
 
 import './landing.css'
 import '../../app.css'
 
 
 const Landing = ({ firstVisit, setFirstVisit }) => {
+    
+    const project = projectsList.filter(project => 
+        project.name === "Limtiless posssibilities"
+    )[0]
 
     return (
         <>
             { firstVisit && <Cover setFirstVisit={setFirstVisit}/>}
-            <div className="flexColNoWrap">
-                <Intro />
+            <div className="flexColNoWrap main">
+                <Intro project={project} />
                 <Projects />
             </div>
            

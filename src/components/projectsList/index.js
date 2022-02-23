@@ -12,6 +12,7 @@ const Projects = () => {
             <div className="projectsContainer">
             {
                 projectsList? projectsList.map(project => {
+                    if(project.name !== "Limtiless posssibilities"){
                     return(
                         <div className="project" >
                             <Link to={`projects/${project.name}`} style={{textDecoration: 'none', color: "inherit"}}>
@@ -23,7 +24,7 @@ const Projects = () => {
                                 <img alt={`${project.name} image`} src={project.img}/>}
                             </Link>
                         </div>
-                    )
+                    )}
                 }):
                 <p>No project to display</p>
 

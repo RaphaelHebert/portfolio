@@ -27,7 +27,7 @@ const Navigation = () => {
   }
 
   return (
-    <div className="navDiv main">
+    <div className="main">
       <Button
         className="navButton"
         id="basic-button"
