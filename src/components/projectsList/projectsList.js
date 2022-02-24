@@ -5,7 +5,7 @@ import TamGiang from '../projects/TamGiang/img/tamGiangSizeClassFrequencies.png'
 
 const projectsList = [
     {
-        name: "Limtiless posssibilities",
+        name: "Limitless possibilities",
         catchphrase: "I love building useful things and use the technology to improve people's life.",
         img: "",
         link: "",
@@ -20,7 +20,7 @@ const projectsList = [
         img: pipy,
         link: "https://pypi.org/project/nsdpy/",
         github: "https://github.com/RaphaelHebert/nsdpy",
-        description: "Automatize the donwload of DNA sequences from NCBI, sort them according to their taxonomy and filter them with a gene name (provided as a regular expression)",
+        description: "Automatize the download of DNA sequences from NCBI, sort them according to their taxonomy and filter them with a gene name (provided as a regular expression)",
         languages: ["Python"],
         type: "package",
     },

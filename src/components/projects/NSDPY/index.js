@@ -4,7 +4,7 @@ import Intro from '../../intro'
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
 import "../../../app.css"
-
+import "../../projectsList/projectsList.css"
 //images
 import pipy from './img/pypi.png';
 import python from './img/python.png';
@@ -42,16 +42,16 @@ const NSDPY = () => {
             project?
             <div className="flexColNoWrap main">
                 <Intro project={project} />
-                <div className="logos">
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     {images.map( img => {
                         return(
                             <img src={img} alt="logo" width="100px"/>
                         )            
                     })}
                 </div>
-                <section className="logos">
+                <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     <article>
-                        My first "professional" achievement with Python3... I wrote this script during a voluntary internship. 
+                        My first achievement with Python3... I wrote this script during a voluntary internship. 
                         NSDPY aims to ease the work of the people who need to download big batches of DNA sequences such as biologists or geneticist..
                         It can automatize batch downloading from the <a href="https://www.ncbi.nlm.nih.gov/" >NCBI</a> databases and then filter 
                         and sort the downloaded sequences according to their taxonomy. /n NCBI is available on <a href="https://github.com/RaphaelHebert/nsdpy">GitHub</a> or can be installed as a package

@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import '../projects.css';
-import projectsList from "../../projectsList/projectsList"
+import '../../../app.css';
+
+import projectsList from '../../projectsList/projectsList';
 
 import bootstrapComponent from './img/promission-bootstrap.png';
 import contact from './img/promission-contact.png';
@@ -36,42 +38,42 @@ const Flask = () => {
         {
             project?
             <>
-                <div className="logos">
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     <h1>{project.name}</h1>
                     <p>A website built with Flask.</p>
                 </div>
-                <div className="logos">
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     {images.map( img => {
                         return(
                             <img src={img} alt="logo" width="100px"/>
                         )            
                     })}
                 </div>
-                <section className="logos">
-                    <div className="flexCol contentStretch">
-                        <div className="flexRow contentStretch">
+                <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
+                    <div className="flex colWrap justifyStretch alignItemsStretch">
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 {project.description}
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={overview} alt="promission overview"/>
                                 </div>
                             </aside>
                         </div>
-                        <div className="flexRow contentStretch">
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 As every moderns websites HTML5, CSS3 and JavaScript are used for front-end.
                                 Bootstrap library is used to leverage the work of other programmers and easily get nice components like menu, buttons and classes to make the website neat and responsive.
                                 As a Flask website the back-end uses Jinja2 to render HTML in the front-end. Jinja2 is a templating language used by python developers. It looks a lot like HTML but can parse some logic &#40;for example looping over an array of text to render it as if you would a typed it in HTML&#41;.
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={bootstrapComponent} alt="promission bootstrap"/>
                                 </div>
                             </aside>
                         </div>
-                        <div className="flexRow contentStretch">
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 <p>
                                     Saving your work and information online is a great feature of modern life. It allows you to access your work from anywhere, remember that you already signup on a website and much more. From a users point of view it needs to be intuitive and straight forward.
@@ -83,24 +85,24 @@ const Flask = () => {
                                 </p>
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={newTask} alt="promission bootstrap"/>
                                 </div>
                             </aside>
                         </div>
-                        <div className="flexRow contentStretch">
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 Internet is probably the most efficient tool to connect people together. The adds section is one of Promission's main feature. 
                                 It lets the user publish adds and consulting adds from other users. As well the user can go the a user's profile by a simple click on an their username appearing on their add.
                                 The adds can be sorted by date, location, rate.. so users can quickly find what they are looking for.
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={seeAdds} alt="promission bootstrap"/>
                                 </div>
                             </aside>
                         </div>
-                        <div className="flexRow contentStretch">
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 <p>
                                     The idea of Promission is not new, but it does not have to be new to make a product that will be useful for a specific group a people.
@@ -115,17 +117,19 @@ const Flask = () => {
                                 </p>
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={publishAdd} alt="promission bootstrap"/>
                                 </div>
                             </aside>
+                        </div>
+                        <div className="flex rowWrap justifyStretch alignItemsStretch">
                             <article>
                                 Sign-up and logins, database management... here's some big pieces of security concerns dealing with sensitive informations.
                                 To make things some libraries had to be used. The cs50 library took care of sanitizing the database to avoid SQL injection attacks.
                                 Werkzeug libraries are use to manage and hash passwords &#40;typicalli something we don't want to writ ourselves if we want a website running by the century&#41;
                             </article>
                             <aside>
-                                <div className="asideImages viewportHeight pens" >
+                                <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
                                     <img src={login} alt="promission bootstrap"/>
                                 </div>
                             </aside>

@@ -1,4 +1,5 @@
 import "./social.css"
+import "../../app.css"
 
 import github from './logos/github.png'
 import codepen from './logos/codepen.png'
@@ -9,7 +10,7 @@ import linkedin from './logos/linkedin.png'
 const Social = () => {
     return (
             <nav>
-                <ul className="flexboxRow navList">
+                <ul className="flex rowNoWrap alignItemsCenter justifySpaceAround navList">
                 {/* TODO: make logo size responsive? */}
                     <li><a href="https://github.com/RaphaelHebert/RaphaelHebert"><img src={github} alt="my github" width="50px"/></a></li>
                     <li><a href="https://codepen.io/raphaelhebert-the-scripter"><img src={codepen} alt="my codepen" width="50px"/></a></li>

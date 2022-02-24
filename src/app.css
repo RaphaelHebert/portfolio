@@ -1,11 +1,61 @@
-.flexRowNoWrap {
+/* 
+############################################################
+
+flexbox
+
+############################################################
+*/
+
+.flex {
     display: flex;
+}
+
+.rowNoWrap {
     flex-flow: row nowrap;
+}
+
+.rowWrap {
+    flex-flow: row wrap;
+}
+
+.colNoWrap {
+    flex-flow: column nowrap;
+}
+
+.colWrap {
+    flex-flow: column wrap;
+}
+
+.alignContentCenter {
+    align-content: center;
+}
+
+.alignItemsCenter {
     align-items: center;
 }
 
-.intro {
-    width: 100 vw;
+.alignItemsStretch {
+    align-items: stretch;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifySpaceAround {
+    justify-content: space-around;
+}
+
+.justifySpaceEvenly {
+    justify-content: space-evenly;
+}
+
+.justifyItemsCenter {
+    justify-items: center;
+}
+
+.justifyStretch {
+    justify-content: stretch;
 }
 
 .item1{
@@ -16,11 +66,29 @@
     flex-grow:5;
 }
 
+/* 
+############################################################
+
+Main styles
+
+############################################################
+*/
+
+
+.intro {
+    width: 100 vw;
+}
+
+
 .main {
     background: #617C91;
     /* color: #E0D5C5;  */
     color: #E8E2CD;
     font-family: 'Roboto Mono', monospace;
+}
+
+.mainContainer {
+    background: linear-gradient(to bottom right, #cbe1f0, #617C91);
 }
 
 .marginLeft{

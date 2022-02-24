@@ -10,13 +10,13 @@ import '../../app.css'
 const Landing = ({ firstVisit, setFirstVisit }) => {
     
     const project = projectsList.filter(project => 
-        project.name === "Limtiless posssibilities"
+        project.name === "Limitless possibilities"
     )[0]
 
     return (
         <>
             { firstVisit && <Cover setFirstVisit={setFirstVisit}/>}
-            <div className="flexColNoWrap main">
+            <div className="flex colNoWrap main">
                 <Intro project={project} />
                 <Projects />
             </div>

@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 //components
 import projectsList from "./projectsList.js";
 //style
-import './projects.css';
+import '../../app.css'
+import './projectsList.css';
+
 
 
 const Projects = () => {
     return (
         <>
-            <div className="projectsContainer">
+            <div className="flex rowWrap justifySpaceEvenly alignItemsStretch mainContainer">
             {
                 projectsList? projectsList.map(project => {
-                    if(project.name !== "Limtiless posssibilities"){
+                    if(project.name !== "Limitless possibilities"){
                     return(
-                        <div className="project" >
+                        <div className="flex colNoWrap justifyCenter project" >
                             <Link to={`projects/${project.name}`} style={{textDecoration: 'none', color: "inherit"}}>
-                                <div>
+                                <div className="flex colNoWrap justifyCenter alignItemsCenter">
                                     <h2>{project.name}</h2>
                                     <p>{project.description}</p>
                                 </div>

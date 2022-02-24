@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
+import "../../../app.css"
 
 import Intro from '../../intro'
 import ird from "./img/logos/ird.png"
@@ -33,14 +34,14 @@ const TamGiang = () => {
             project?
             <>
                 <Intro project={project} />
-                <div className="logos">
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     {images.map( img => {
                         return(
                             <img src={img} alt="logo" width="100px"/>
                         )            
                     })}
                 </div>
-                <section className="logos">
+                <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     <article>
                        This project was the result of a partnership between the &#40;IRD Institut de Recherche pour le Developpement&#41; and Danang university of technology.
                        Data analysis plays a central role in environmental sciences. Statistics has a central role in most research fields and environmental sciences are not exeptions to that.
