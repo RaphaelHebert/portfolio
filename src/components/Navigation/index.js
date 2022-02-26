@@ -16,7 +16,7 @@ const NavigationBar = () => {
     return(
         <div className="flex rowNoWrap justifySpaceBetween navBar">
             <div className="flex rowNoWrap justifySpaceAround">
-                <button className="navButton" id="basic-button" onClick={handleClick}>Home</button>
+                <button className="navButton" id="basic-button" onClick={handleClick}>HOME</button>
                 <ProjectsNavigation />
             </div>
             <ContactsNavigation />

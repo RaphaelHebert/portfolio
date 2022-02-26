@@ -1,10 +1,11 @@
 import Cover from "./Cover";
 import Projects from "../projectsList";
 import projectsList from "../projectsList/projectsList";
-import Intro from "../intro"
+import Intro from "../intro";
+import ProjectsList from "../projectsList";
 
-import './landing.css'
-import '../../app.css'
+import './landing.css';
+import '../../app.css';
 
 
 const Landing = ({ firstVisit, setFirstVisit }) => {
@@ -18,7 +19,7 @@ const Landing = ({ firstVisit, setFirstVisit }) => {
             { firstVisit && <Cover setFirstVisit={setFirstVisit}/>}
             <div className="flex colNoWrap main">
                 <Intro project={project} />
-                <Projects />
+                <ProjectsList />
             </div>
            
         </>

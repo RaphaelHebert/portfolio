@@ -42,12 +42,20 @@ flexbox
     justify-content: center;
 }
 
+.justifyStart {
+    justify-content: flex-start;
+}
+
 .justifySpaceAround {
     justify-content: space-around;
 }
 
 .justifySpaceEvenly {
     justify-content: space-evenly;
+}
+
+.justifySpaceBetween {
+    justify-content: space-between;
 }
 
 .justifyItemsCenter {
@@ -74,11 +82,31 @@ Main styles
 ############################################################
 */
 
+.width100 {
+    width: 100%;
+}
+
+.paddingLeft20 {
+    padding-left: 20%;
+}
+
+.navBar {
+    background: #E8E2CD;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-style: inherit;
+}
+
+aside h2 {
+    text-align:center;
+}
 
 .intro {
     width: 100 vw;
 }
-
 
 .main {
     background: #617C91;
@@ -91,12 +119,9 @@ Main styles
     background: linear-gradient(to bottom right, #cbe1f0, #617C91);
 }
 
-.marginLeft{
-    margin-left: 5%;
-}
 
 .pageClass {
-    width: 100vw;
+    width: 100%;
     position: relative;
     margin: none;
     padding: none;

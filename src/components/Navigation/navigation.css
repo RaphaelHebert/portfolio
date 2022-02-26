@@ -23,18 +23,23 @@
     color: #E8E2CD;
     display: relative;
     font-weight: bold;
-    padding: 3px 4vW; 
+    padding: 3px 4vw; 
     transition: color .5s, padding .5s, border .5s;
 }
 
-#basic-menu ul{
+#basic-menu li {
     font-size: calc(1vw + 3px);
     height: calc(10px + 10vh);
-    padding: 2px 4vw 2px 0vw;
+    padding: 0 3vw 0 1vw;
+    min-width: calc(12vw + 4px);
+}
+ 
+#basic-menu ul{
+    padding: 0;
 }
 
+
 #basic-menu .customItem{
-    width: calc(5vw + 3px);
     border-bottom: 1px dashed #9e8d4f;
 }
 

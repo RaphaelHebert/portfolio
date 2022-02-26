@@ -9,7 +9,7 @@ import linkedin from './logos/linkedin.png'
 
 const Social = () => {
     return (
-            <nav>
+            <nav className="navBar">
                 <ul className="flex rowNoWrap alignItemsCenter justifySpaceAround navList">
                 {/* TODO: make logo size responsive? */}
                     <li><a href="https://github.com/RaphaelHebert/RaphaelHebert"><img src={github} alt="my github" width="50px"/></a></li>
