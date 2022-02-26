@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
+import Intro from '../../intro'
+
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
+import "../../../app.css"
 
 
 const javascript = 'https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'
@@ -12,64 +15,45 @@ const images = [codepen, javascript, css3, html5]
 
 
 
+
+
 const CodePen = () => {
     const [project, setProject] = useState([])
 
     useEffect( () => {
-        setProject(projectsList.filter(project => project.name === "CodePen")[0])
+        setProject(projectsList.filter(project => project.name === "CodePen")[0]);
     }, [])
        
+
     return(
         <>
+        
         {
             project?
-            <>
-                <div className="logos">
-                    <h1>{project.name}</h1>
-                    <p>Microplastic in TamGiang lagoons</p>
-                </div>
-                <div className="logos">
+            <div className="flexColNoWrap main mainContainer">
+                <Intro project={project} />
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     {images.map( img => {
                         return(
                             <img src={img} alt="logo" width="100px"/>
                         )            
                     })}
                 </div>
-                <section className="logos">
-                    <div className="flexCol contentStretch">
-                        <div className="flexRow contentStretch">
-                            <article>
-                            Some practice of HTML5, CSS3 and JavaScript..
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <iframe title="font-style" width="100%" title="Font style" src="https://codepen.io/raphaelhebert-the-scripter/embed/XWMrbOB?default-tab=html%2Cresult" />
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                            Some practice of HTML5, CSS3 and JavaScript..
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <iframe title="font-style" width="100%" title="Font style" src="https://codepen.io/raphaelhebert-the-scripter/embed/XWpLJZe?default-tab=html%2Cresult" />
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                            Some practice of HTML5, CSS3 and JavaScript..
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <iframe title="font-style" width="100%" title="Font style" src="https://codepen.io/raphaelhebert-the-scripter/embed/vYxGWrR?default-tab=html%2Cresult" />
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
+                <section className="flex colWrap justifyStretch alignItemsStretch alignContentCenter">
+                    <article className="flex colNoWrap justifyCenter codePenDisplay">
+                        <h2> Some practice of HTML5, CSS3 and JavaScript.. </h2>
+                        <iframe title="font-style" title="fonts" loading="lazy" src="https://codepen.io/raphaelhebert-the-scripter/embed/XWMrbOB?default-tab=html%2Cresult"/>
+                    </article>
+                    <article className="flex colNoWrap justifyCenter codePenDisplay">
+                        <h2> Pure HTML5 and CSS3 can achieve a lot </h2>
+                        <iframe title="font-style" width="100%" title="CSSstopwatch" loading="lazy" src="https://codepen.io/raphaelhebert-the-scripter/embed/XWpLJZe?default-tab=html%2Cresult" />
+                    </article>
+                    <article className="flex colNoWrap justifyCenter codePenDisplay">
+                        <h2> Press the arrow keys to make the man move! </h2>
+                        <iframe title="font-style" width="100%" title="ManJumps" loading="lazy" src="https://codepen.io/raphaelhebert-the-scripter/embed/vYxGWrR?default-tab=html%2Cresult" />
+                    </article>
                 </section>
-            </>:
+            </div>:
             // TODO: put a spinner
             <p>Loading project...</p>
         }

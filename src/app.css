@@ -1,18 +1,180 @@
-.main {
-    background: #617C91;
-    /* color: #E0D5C5;  */
-    color: #E8E2CD;
-    font-family: 'Roboto Mono', monospace;
+/* 
+############################################################
+
+flexbox
+
+############################################################
+*/
+
+.flex {
+    display: flex;
+}
+
+.rowNoWrap {
+    flex-flow: row nowrap;
+}
+
+.rowWrap {
+    flex-flow: row wrap;
+}
+
+.colNoWrap {
+    flex-flow: column nowrap;
+}
+
+.colWrap {
+    flex-flow: column wrap;
+}
+
+.alignContentCenter {
+    align-content: center;
+}
+
+.alignContentStretch{
+    align-content: stretch;
+}
+
+.alignContentStart{
+    align-content: flex-start;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.alignItemsStretch {
+    align-items: stretch;
+}
+
+.alignItemsStart {
+    align-items: flex-start;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifySpaceAround {
+    justify-content: space-around;
+}
+
+.justifySpaceEvenly {
+    justify-content: space-evenly;
+}
+
+.justifySpaceBetween {
+    justify-content: space-between;
+}
+
+.justifyItemsCenter {
+    justify-items: center;
+}
+
+.justifyStretch {
+    justify-content: stretch;
+}
+
+.item1{
+    flex-grow: 1;
+}
+
+.item5{
+    flex-grow:5;
+}
+
+/* 
+############################################################
+
+Display
+
+############################################################
+*/
+
+.displayBlock {
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* 
+############################################################
+
+Main styles
+
+############################################################
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+    font-style: inherit;
+}
+
+aside h2 {
+    text-align:center;
+}
+
+iframe {
+    height: calc(100px + 70vh);
+}
+
+section p {
+    padding: 0 8% 0 8%;
+}
+
+section {
+    padding: 4% 0;
+    border-bottom: solid 2px #9E8E4E;
+
+}
+
+.codePenDisplay{
+    max-width: 80%;
+    width: 80%;
+    padding: 35px 10%;
+    padding-bottom: 55px;
+    border-bottom: solid 2px #9E8E4E;
+}
+
+.codePenDisplay:last-of-type {
+    border-bottom: none;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.paddingLeft20 {
+    padding-left: 20%;
+}
+
+.navBar {
+    background: #E8E2CD;
 }
 
 .intro {
     width: 100 vw;
-    margin: none;
-    padding: 20px;
-    padding-left: 20%;
 }
 
+.main {
+    background: #617C91;
+    color: #E8E2CD;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+}
+
+.mainContainer {
+    background: linear-gradient(to bottom right, #cbe1f0, #617C91);
+}
+
+
 .pageClass {
+    width: 100%;
     position: relative;
     margin: none;
     padding: none;

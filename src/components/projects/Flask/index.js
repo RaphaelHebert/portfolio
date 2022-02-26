@@ -1,6 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import '../projects.css';
-import projectsList from "../../projectsList/projectsList"
+import '../../../app.css';
+
+import projectsList from '../../projectsList/projectsList';
+import Intro from '../../intro'
 
 import bootstrapComponent from './img/promission-bootstrap.png';
 import contact from './img/promission-contact.png';
@@ -33,110 +36,104 @@ const Flask = () => {
 
     return(
         <>
-        {
-            project?
-            <>
-                <div className="logos">
-                    <h1>{project.name}</h1>
-                    <p>A website built with Flask.</p>
-                </div>
-                <div className="logos">
-                    {images.map( img => {
-                        return(
-                            <img src={img} alt="logo" width="100px"/>
-                        )            
-                    })}
-                </div>
-                <section className="logos">
-                    <div className="flexCol contentStretch">
-                        <div className="flexRow contentStretch">
-                            <article>
-                                {project.description}
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={overview} alt="promission overview"/>
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                                As every moderns websites HTML5, CSS3 and JavaScript are used for front-end.
-                                Bootstrap library is used to leverage the work of other programmers and easily get nice components like menu, buttons and classes to make the website neat and responsive.
-                                As a Flask website the back-end uses Jinja2 to render HTML in the front-end. Jinja2 is a templating language used by python developers. It looks a lot like HTML but can parse some logic &#40;for example looping over an array of text to render it as if you would a typed it in HTML&#41;.
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={bootstrapComponent} alt="promission bootstrap"/>
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                                <p>
-                                    Saving your work and information online is a great feature of modern life. It allows you to access your work from anywhere, remember that you already signup on a website and much more. From a users point of view it needs to be intuitive and straight forward.
-                                    But under the hood allowing such is a piece of work. SQL databases is great way to store and manage information. SQL is great language to query databases and quickly retrieve only the information you need. This website uses the Heroku Postgres tool to manage a SQL database.
-                                    As well thanks to the python cs50 library that made the requests to the database easier.
-                                </p>
-                                <p>
-                                    Promission uses SQL database to let the user sign up, remember his profile, publish adds, and check the adds and profiles of other users sorted by different criteria such as location, wage, rating..
-                                </p>
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={newTask} alt="promission bootstrap"/>
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                                Internet is probably the most efficient tool to connect people together. The adds section is one of Promission's main feature. 
-                                It lets the user publish adds and consulting adds from other users. As well the user can go the a user's profile by a simple click on an their username appearing on their add.
-                                The adds can be sorted by date, location, rate.. so users can quickly find what they are looking for.
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={seeAdds} alt="promission bootstrap"/>
-                                </div>
-                            </aside>
-                        </div>
-                        <div className="flexRow contentStretch">
-                            <article>
-                                <p>
-                                    The idea of Promission is not new, but it does not have to be new to make a product that will be useful for a specific group a people.
-                                    It is a kind a market place connecting schools, private centers and agents to English teachers. To be efficient it needs to keep things simple while providing the essentials.
-                                    Promission give the possibility to find teacher by checking the profiles, to send them a request for contact &#40;as teachers don't want their contact information to be displayed to anyone &#41;,
-                                    and leave a rating on their profile. And teachers can leave a rating to their employers too. 
-                                </p>
-                                <p>
-                                    A school generally have many teachers to manage and sometimes teachers can work for many schools or private centers. Promission let them share their calendar together so it makes it easy see who is available at a specific time.
-                                    This calendar was implemented by hand using SQL on back-end. It was a great way to learn SQL and SQL database structure and management.
-                                    Thought a lot of libraries can be used to implement a calendar properly doing it by hand was a great way to learn.
-                                </p>
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={publishAdd} alt="promission bootstrap"/>
-                                </div>
-                            </aside>
-                            <article>
-                                Sign-up and logins, database management... here's some big pieces of security concerns dealing with sensitive informations.
-                                To make things some libraries had to be used. The cs50 library took care of sanitizing the database to avoid SQL injection attacks.
-                                Werkzeug libraries are use to manage and hash passwords &#40;typicalli something we don't want to writ ourselves if we want a website running by the century&#41;
-                            </article>
-                            <aside>
-                                <div className="asideImages viewportHeight pens" >
-                                    <img src={login} alt="promission bootstrap"/>
-                                </div>
-                            </aside>
-                        </div>
+            {
+                project?
+                <div className="flexColNoWrap main mainContainer">
+                    <Intro project={project} />
+                    <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
+                        {images.map( img => {
+                            return(
+                                <img src={img} alt="logo" width="100px"/>
+                            )            
+                        })}
                     </div>
-
-                </section>
-            </>:
-            // TODO: put a spinner
-            <p>Loading project...</p>
-        }
+                    <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
+                        <article>
+                            {project.description}
+                        </article>
+                        <aside>
+                            <div className="asideImages">
+                                <img loading="lazy" src={overview} alt="promission overview" width="100%"/>
+                            </div>
+                        </aside>
+                    </section>
+                    <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
+                        <article>
+                            As every moderns websites HTML5, CSS3 and JavaScript are used for front-end.
+                            Bootstrap library is used to leverage the work of other programmers and easily get nice components like menu, buttons and classes to make the website neat and responsive.
+                            As a Flask website the back-end uses Jinja2 to render HTML in the front-end. Jinja2 is a templating language used by python developers. It looks a lot like HTML but can parse some logic &#40;for example looping over an array of text to render it as if you would a typed it in HTML&#41;.
+                        </article>
+                        <aside>
+                            <div className="asideImages">
+                                <img loading="lazy" src={bootstrapComponent} alt="promission bootstrap"  width="100%"/>
+                            </div>
+                         </aside>
+                    </section>
+                    <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
+                        <article>
+                            <p>
+                                Saving your work and information online is a great feature of modern life. It allows you to access your work from anywhere, remember that you already signup on a website and much more. From a users point of view it needs to be intuitive and straight forward.
+                                But under the hood allowing such is a piece of work. SQL databases is great way to store and manage information. SQL is great language to query databases and quickly retrieve only the information you need. This website uses the Heroku Postgres tool to manage a SQL database.
+                                As well thanks to the python cs50 library that made the requests to the database easier.
+                            </p>
+                            <p>
+                                Promission uses SQL database to let the user sign up, remember his profile, publish adds, and check the adds and profiles of other users sorted by different criteria such as location, wage, rating..
+                            </p>
+                        </article>
+                        <aside>
+                            <div className="asideImages">
+                                <img loading="lazy" src={newTask} alt="promission bootstrap"  width="100%"/>
+                            </div>
+                        </aside>
+                    </section>
+                    <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
+                        <article>
+                            Internet is probably the most efficient tool to connect people together. The adds section is one of Promission's main feature. 
+                            It lets the user publish adds and consulting adds from other users. As well the user can go the a user's profile by a simple click on an their username appearing on their add.
+                            The adds can be sorted by date, location, rate.. so users can quickly find what they are looking for.
+                        </article>
+                        <aside>
+                            <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
+                                <img src={seeAdds} alt="promission bootstrap"  width="100%"/>
+                            </div>
+                        </aside>
+                    </section>
+                    <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
+                        <article>
+                            <p>
+                                The idea of Promission is not new, but it does not have to be new to make a product that will be useful for a specific group a people.
+                                It is a kind a market place connecting schools, private centers and agents to English teachers. To be efficient it needs to keep things simple while providing the essentials.
+                                Promission give the possibility to find teacher by checking the profiles, to send them a request for contact &#40;as teachers don't want their contact information to be displayed to anyone &#41;,
+                                and leave a rating on their profile. And teachers can leave a rating to their employers too. 
+                            </p>
+                            <p>
+                                A school generally have many teachers to manage and sometimes teachers can work for many schools or private centers. Promission let them share their calendar together so it makes it easy see who is available at a specific time.
+                                This calendar was implemented by hand using SQL on back-end. It was a great way to learn SQL and SQL database structure and management.
+                                Thought a lot of libraries can be used to implement a calendar properly doing it by hand was a great way to learn.
+                            </p>
+                        </article>
+                        <aside>
+                            <div className="asideImages viewportHeight flex rowNoWrap justifyStretch justifyItemsCenter alignItemsStretch">
+                                <img src={publishAdd} alt="promission bootstrap"  width="100%"/>
+                            </div>
+                        </aside>
+                    </section>
+                    <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
+                        <article>
+                            Sign-up and logins, database management... here's some big pieces of security concerns dealing with sensitive informations.
+                            To make things some libraries had to be used. The cs50 library took care of sanitizing the database to avoid SQL injection attacks.
+                            Werkzeug libraries are use to manage and hash passwords &#40;typicalli something we don't want to writ ourselves if we want a website running by the century&#41;
+                        </article>
+                        <aside className="flex colNoWrap">
+                            <div className="asideImages">
+                                <img loading="lazy"  src={login} alt="promission bootstrap"  width="100%"/>
+                            </div>
+                        </aside>
+                    </section>
+                </div>:
+                // TODO: put a spinner
+                <p>Loading project...</p>
+            }
         </>
     )
 }

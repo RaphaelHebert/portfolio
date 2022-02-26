@@ -5,22 +5,39 @@
 }
 
 #basic-button {
-    background: #cbe1f0;
-    border: solid 3px grey;
-    border-radius: 10px;
-    color: #9e8d4f;
+    background: #E8E2CD;
+    border: none;
+    border-radius: 0;
+    border-bottom: solid 2px #9e8d4f;
+    color: #617C91;
     font-family: 'Roboto Mono', monospace;
     font-size: calc(1vw + 3px);
-    Padding: 30%;
-
+    height: calc(10px + 10vh);
+    padding: 2px 4vw;
+    transition: color .5s, padding .5s, border .5s;
 }
 
 #basic-button:hover {
-    border: solid 3px #9e8d4f;
-    color: #E8E2CD;
     background: #617C91;
-    font-weight: bold; 
+    border-bottom: solid 5px #9e8d4f;
+    color: #E8E2CD;
+    display: relative;
+    font-weight: bold;
+    padding: 3px 4vw; 
+    transition: color .5s, padding .5s, border .5s;
 }
+
+#basic-menu li {
+    font-size: calc(1vw + 3px);
+    height: calc(10px + 10vh);
+    padding: 0 3vw 0 1vw;
+    min-width: calc(12vw + 4px);
+}
+ 
+#basic-menu ul{
+    padding: 0;
+}
+
 
 #basic-menu .customItem{
     border-bottom: 1px dashed #9e8d4f;
