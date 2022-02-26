@@ -34,12 +34,20 @@ flexbox
     align-content: stretch;
 }
 
+.alignContentStart{
+    align-content: flex-start;
+}
+
 .alignItemsCenter {
     align-items: center;
 }
 
 .alignItemsStretch {
     align-items: stretch;
+}
+
+.alignItemsStart {
+    align-items: flex-start;
 }
 
 .justifyCenter {
@@ -115,6 +123,16 @@ iframe {
     height: calc(100px + 70vh);
 }
 
+section p {
+    padding: 0 8% 0 8%;
+}
+
+section {
+    padding: 4% 0;
+    border-bottom: solid 2px #9E8E4E;
+
+}
+
 .codePenDisplay{
     max-width: 80%;
     width: 80%;
@@ -143,6 +161,7 @@ iframe {
     background: #617C91;
     color: #E8E2CD;
     font-family: 'Roboto Mono', monospace;
+    text-align: justify;
 }
 
 .mainContainer {
