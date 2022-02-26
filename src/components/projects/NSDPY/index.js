@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 
+import Spinner from '../../Spinner'
 import Intro from '../../intro'
 import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
@@ -56,7 +55,7 @@ const NSDPY = () => {
                         )            
                     })}
                 </div>
-                <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
+                <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
                     <article>
                         Built with Python3 NSDPY aims to ease the work of the people who need to download big batches of DNA sequences such as biologists or geneticist..
                         It can automatize batch downloading from the <a href="https://www.ncbi.nlm.nih.gov/" >NCBI</a> databases and then filter 
@@ -69,7 +68,7 @@ const NSDPY = () => {
                     <aside className="flex colNoWrap justifyCenter">
                         <h2>NSDPY workflow</h2>
                         <div className={loaded.spinner}>
-                            <Box sx={{ display: 'flex' }}><CircularProgress /></Box>
+                            <Spinner/>
                         </div>
                         <img className={loaded.img} src="https://docs.google.com/drawings/d/e/2PACX-1vRD4h7l0S57op_4j-5xsz8iv1j1XBliw-jEdtnWOIq-JAU2l8kSV6d1NmkHd5Q4zhUmZCA3SHUSuHJw/pub?w=801&amp;h=744" alt="NSDPY workflow" onLoad={handleOnload}/>   
                     </aside>

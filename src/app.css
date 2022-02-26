@@ -30,6 +30,10 @@ flexbox
     align-content: center;
 }
 
+.alignContentStretch{
+    align-content: stretch;
+}
+
 .alignItemsCenter {
     align-items: center;
 }
@@ -97,6 +101,27 @@ Main styles
 
 ############################################################
 */
+a {
+    text-decoration: none;
+    color: inherit;
+    font-style: inherit;
+}
+
+aside h2 {
+    text-align:center;
+}
+
+iframe {
+    height: calc(100px + 70vh);
+}
+
+.codePenDisplay{
+    max-width: 80%;
+    width: 80%;
+    padding: 35px 10%;
+    padding-bottom: 55px;
+    border-bottom: solid 2px #9E8E4E;
+}
 
 .width100 {
     width: 100%;
@@ -110,23 +135,12 @@ Main styles
     background: #E8E2CD;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    font-style: inherit;
-}
-
-aside h2 {
-    text-align:center;
-}
-
 .intro {
     width: 100 vw;
 }
 
 .main {
     background: #617C91;
-    /* color: #E0D5C5;  */
     color: #E8E2CD;
     font-family: 'Roboto Mono', monospace;
 }
