@@ -141,6 +141,10 @@ section {
     border-bottom: solid 2px #9E8E4E;
 }
 
+.codePenDisplay:last-of-type {
+    border-bottom: none;
+}
+
 .width100 {
     width: 100%;
 }
