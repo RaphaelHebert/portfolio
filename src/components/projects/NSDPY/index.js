@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 import Intro from '../../intro'
 import projectsList from "../../projectsList/projectsList";
@@ -31,10 +33,15 @@ const NSDPY = () => {
 
     // TODO: get the project name from url 
     const [project, setProject] = useState([])
+    const [loaded, setLoaded] = useState({spinner: "flex colNoWarp justifyCenter", img: "displayNone"})
 
     useEffect( () => {
         setProject(projectsList.filter(project => project.name === "NSDPY")[0])
     }, [])
+
+    const handleOnload = () => {
+        setLoaded({spinner: "displayNone", img: "displayBlock"})
+    }
 
     return(
         <>
@@ -61,7 +68,10 @@ const NSDPY = () => {
                     </article>
                     <aside className="flex colNoWrap justifyCenter">
                         <h2>NSDPY workflow</h2>
-                        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRD4h7l0S57op_4j-5xsz8iv1j1XBliw-jEdtnWOIq-JAU2l8kSV6d1NmkHd5Q4zhUmZCA3SHUSuHJw/pub?w=801&amp;h=744"/>      
+                        <div className={loaded.spinner}>
+                            <Box sx={{ display: 'flex' }}><CircularProgress /></Box>
+                        </div>
+                        <img className={loaded.img} src="https://docs.google.com/drawings/d/e/2PACX-1vRD4h7l0S57op_4j-5xsz8iv1j1XBliw-jEdtnWOIq-JAU2l8kSV6d1NmkHd5Q4zhUmZCA3SHUSuHJw/pub?w=801&amp;h=744" alt="NSDPY workflow" onLoad={handleOnload}/>   
                     </aside>
                 </section>
             </div>:
