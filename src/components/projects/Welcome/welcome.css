@@ -1,0 +1,433 @@
+/* 
+=============================
+Reset 
+=============================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+=============================
+Custom styles: main sections
+=============================
+*/
+
+html, 
+body {
+    font: 62.5% Lato, Serif;
+} 
+
+.item {
+	flex: 1 1 auto;
+}
+
+/* 
+=============================
+Landing page
+=============================
+*/
+
+/* bands */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.welcome {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:  rgba(191,191,191,0.8);
+}
+
+.band {
+	position: absolute;
+	top: 35%;
+	width: 130%;
+	font-family: lobster;
+	font-size: 30vh;
+	text-align: center;
+	height: 35%;
+	left: -15%;
+}
+
+
+
+.one {
+	background: rgba(242,121,173,1);
+	transform: rotate(40deg);
+	animation: welcomebandone 3.3s 1;
+}
+
+.two {
+	background: rgb(255, 236, 66);
+	transform: rotate(-40deg);
+	animation: welcomebandtwo 6.6s 1;
+}
+
+.three {
+	background: linear-gradient(to left, rgb(18, 163, 20) 40%, rgba(255, 255, 0, .5) 44%, rgb(18, 163, 20)48%);
+	background-size: 200%;
+	transition-property: background-position;
+	background-position: 120%;
+  	transition-duration: 0; 
+	height: 40%;
+	top: 30%;
+	font-size: 35vh;
+	/* font-size: calc(16vh + 12vw); */
+	animation: welcomeband 13.3s 1;
+	width: 100%;
+	left: 0;
+}
+
+.three:hover {
+	background-position: 0;
+  	transition-duration: 1s;
+
+}
+
+.four {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	background: rgba(240,240,240,0.8);
+	top: 70%;
+	bottom: 0;
+	width: 100%;
+	animation: welcomebandfour 13.3s 1;
+	padding: 3% 5% 0 5%;
+}
+
+/* annimations */
+
+@keyframes welcomebandone {
+	from {
+		width: 0;
+		font-size: 0;
+		color: rgba(242,121,173,1);
+	}
+	to {
+		width: 130%;
+		font-size: 30vh;
+		color:#000;
+	}
+}
+@keyframes welcomebandtwo {
+	0% {
+		width: 0;
+		font-size: 0;
+		left: 100%;
+		color: rgb(255, 236, 66);
+	}
+	50% {
+		width: 0;
+		font-size: 0;
+		left: 100%;
+		color: rgb(255, 236, 66);
+	}
+
+	100% {
+		width: 130%;
+		font-size: 30vh;
+		left: -15%;
+		color: #000;
+	}
+}
+@keyframes welcomeband {
+	0% {
+		height: 0;
+		font-size: 0;
+		color: rgb(18, 163, 20);
+	}
+	50% {
+		height: 0%;
+		font-size: 0;
+		color: rgb(18, 163, 20);
+	}
+	75% {
+		height: 40%;
+		font-size: 35vh;
+	}
+	100% {
+		color: black;
+	}
+} 
+@keyframes welcomebandfour {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes welcomebandlogo {
+	0% {
+		height: 0;
+	}
+	75% {
+		height: 0;
+	}
+	100% {
+		height: 160px;
+	}
+}
+
+/* logos */
+
+.logo {
+	flex: 1 1 auto;
+	height: 100%;
+}
+
+.html5 {
+	background: url('https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg');
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.css3 {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/256px-CSS3_logo_and_wordmark.svg.png");
+	background-size: 35%;
+	background-repeat: no-repeat;
+}
+
+.js {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/1280px-Javascript_badge.svg.png");
+	background-size: 47%;
+	background-repeat: no-repeat;
+}
+
+.react {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg");
+	background-size: 53%;
+	background-repeat: no-repeat;
+}
+
+.node {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg");
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
+
+/* breakpoints */
+
+@media only screen and (max-width: 800px){
+	.band {
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 20vw;
+		text-align: top;
+		left: 0;
+	}
+
+	.one {
+		background: rgb(245, 102, 164);
+		transform: none;
+		animation: welcomebandonesmall 0.33s 1;
+		z-index: 1;
+
+	}
+
+	.one:hover {
+		background: rgb(241, 3, 107);
+		position: absolute;
+		bottom: 10%;
+		animation: welcomebandonesmallhover 0.33s 1;
+		z-index: 3;
+	}
+
+	@keyframes welcomebandonesmall {
+		from {
+			bottom: 70%;
+		}
+	}
+	
+	.two {
+		background: rgb(255, 236, 66);
+		transform: none;
+		top: 15%;
+		animation: welcomebandtwosmall 0.66s 1;
+		z-index: 2;
+	}
+	
+	.three {
+		background: linear-gradient(to right, rgb(18, 163, 20),rgb(18, 163, 20) 50%, rgb(255, 236, 66) 53%, rgb(241, 3, 107) 54%, rgb(255, 236, 66) 55%, rgb(18, 163, 20)58%);
+		background-size: 200%;
+		background-position: 0%;
+		top: 30%;
+		height: 100%;
+		transform: none;
+		font-size: 24vw;
+		animation: welcomebandsmall 1s 1, shine 1s 1;
+		animation-play-state: running;
+		padding-top: 1%;
+		z-index: 3;
+	}
+	.three:hover {
+		animation: shine 1s 1;
+	}
+	@keyframes shine{
+		0%{
+			background-position: 0%;
+		}
+		100%{
+			background-position: 120%;
+		}
+	}
+	.four {
+		position: absolute;
+		display: flex;
+		flex-flow: row wrap;
+		align-content: stretch;
+		justify-content: space-evenly;
+		background: rgba(240,240,240,0.8);
+		top: 60%;
+		bottom: 0;
+		width: 100%;
+		animation: welcomebandfoursmall 1.33s 1;
+		padding: 0;
+		border-top: 4px dashed lightgrey;
+		z-index: 4;
+	}
+
+	.logo {
+		flex: unset;
+		width: 80px;
+		padding: 0 45px;
+		height: 100px
+	}
+	.html5 {
+		background: url('https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg');
+		background-repeat: no-repeat;
+		background-size: 85px;
+		background-position: center;
+
+	}
+	
+	.css3 {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/256px-CSS3_logo_and_wordmark.svg.png");
+		background-size: 65px;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+	
+	.js {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/1280px-Javascript_badge.svg.png");
+		background-size: 80px;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+	
+	.react {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.node {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg");
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	@keyframes welcomebandonesmall {
+		from {
+			top: 100%;
+		}
+	}
+	@keyframes welcomebandtwosmall {
+		0% {
+			top: 100%;
+		}
+		50% {
+			top: 100%;
+		}
+	}
+	@keyframes welcomebandsmall {
+		0% {
+			top: 100%;
+		}
+		66% {
+			top: 100%;
+		}
+	} 
+	@keyframes welcomebandfoursmall {
+		0% {
+			top: 100%;
+		}
+		75% {
+			top: 100%;
+		}
+	}
+}
+
+/* @media only screen and (min-width: 1125px){
+	.three {
+		font-size: 20vw;
+	}
+	.four {
+
+	}
+} */
