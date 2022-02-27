@@ -56,14 +56,26 @@ const NSDPY = () => {
                     })}
                 </div>
                 <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
-                    <article>
+                    <article className="flex colNoWrap justifySpaceEvenly">
+                        <p>
                         Built with Python3 NSDPY aims to ease the work of the people who need to download big batches of DNA sequences such as biologists or geneticist..
-                        It can automatize batch downloading from the <a href="https://www.ncbi.nlm.nih.gov/" >NCBI</a> databases and then filter 
+                        It can automatize batch downloading from the NCBI databases and then filter 
                         and sort the downloaded sequences according to their taxonomy. /n NCBI is available on <a href="https://github.com/RaphaelHebert/nsdpy">GitHub</a> or can be installed as a package
-                        from the <a href="https://pypi.org/project/nsdpy/">PyPI</a> website to be used directly in the terminal and included in a pipeline.
-                        It is also available on <a href="https://colab.research.google.com/drive/1UmxzRc_k5sNeQ2RPGe29nWR_1_0FRPkq" >Google Colab</a>.
-                        The documentation is available on <a href="https://nsdpy.readthedocs.io/en/latest/">readTheDocs</a> and a
-                        paper has been submitted to the <a href="https://www.journals.elsevier.com/softwarex">softwareX journal</a>.. waiting for approval..
+                        from the PyPI website to be used directly in the terminal and included in a pipeline.
+                        It is also available on Google Colab.
+                        The documentation is available on readTheDocs and a
+                        paper is on its way to be published in softwareX journal.
+                        </p>
+                        <p>Links to NSDPY references and documentation:
+                            <ul>
+                                <li><a href="https://github.com/RaphaelHebert/nsdpy">GitHub repository</a></li>
+                                <li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li>
+                                <li><a href="https://pypi.org/project/nsdpy/">PyPI</a></li>
+                                <li><a href="https://colab.research.google.com/drive/1UmxzRc_k5sNeQ2RPGe29nWR_1_0FRPkq" >Google Colab</a></li>
+                                <li><a href="https://nsdpy.readthedocs.io/en/latest/">readTheDocs</a></li>
+                                <li><a href="https://www.journals.elsevier.com/softwarex">softwareX journal</a></li>
+                            </ul>
+                        </p>
                     </article>
                     <aside className="flex colNoWrap justifyCenter">
                         <h2>NSDPY workflow</h2>

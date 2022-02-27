@@ -34,19 +34,27 @@ const TamGiang = () => {
             project?
             <div className="flexColNoWrap main mainContainer">
                 <Intro project={project} />
-                <section>
-                    <p>
-                        This project was was part of the COMPOSE project that resulted and is the result of a partnership between the IRD &#40;Institut de Recherche pour le Developpement&#41; and Danang university of technology.
-                        Data analysis plays a central role in environmental sciences. Statistics has a central role in most research fields and environmental sciences are not exception to that. <br/>
-                        See <a href="https://colab.research.google.com/drive/11wadYnU2DAV5y3gLCjAtFfE4f5IojN4W?usp=sharing">Google Colab Notebook</a> of this project.
-                    </p>
-                    <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
+                <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                     {images.map( img => {
                         return(
                             <img src={img} alt="logo" width="100px"/>
                         )            
                     })}
                     </div>
+                <section>
+                <div className="TamGiang">
+                    <p>
+                        This project was was part of the COMPOSE project that resulted and is the result of a partnership between the IRD &#40;Institut de Recherche pour le Developpement&#41; and Danang university of technology.
+                        Data analysis plays a central role in environmental sciences. Statistics has a central role in most research fields and environmental sciences are not exception to that. <br/>
+                    </p>
+                    <p> Links and references:
+                        <ul className="flex rwoWrap">
+                            <li> <a href="https://colab.research.google.com/drive/11wadYnU2DAV5y3gLCjAtFfE4f5IojN4W?usp=sharing">Google Colab Notebook</a></li>
+                            <li><a href="https://www.ird.fr/vietnam/projets">IRD in Vietnam</a></li>
+                            <li><a href="https://www.facebook.com/composeproject">COMPOSE project on Facebook </a></li>
+                        </ul>
+                    </p>
+                </div> 
                 </section>
                 <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
                     <article>

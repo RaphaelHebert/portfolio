@@ -6,7 +6,7 @@ const Intro = ( { project } ) => {
     
         return(
             <div className="flex rowNoWrap">
-                <div className="main paddingLeft20 width100">
+                <div className="main paddingLeft20 width100 intro">
                     <h2>{project.name}</h2> 
                     <p>{project.catchphrase}</p>
                     {project.name === "Limitless possibilities" && <p>That's why I code.</p>}
