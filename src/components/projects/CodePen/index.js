@@ -39,6 +39,9 @@ const CodePen = () => {
                         )            
                     })}
                 </div>
+                <div className="flex rowNoWrap justifyCenter">
+                    <a href="https://codepen.io/raphaelhebert-the-scripter">Visit my CodePen here </a>
+                </div>
                 <section className="flex colWrap justifyStretch alignItemsStretch alignContentCenter">
                     <article className="flex colNoWrap justifyCenter codePenDisplay">
                         <h2> Some practice of HTML5, CSS3 and JavaScript.. </h2>

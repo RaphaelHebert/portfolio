@@ -46,11 +46,11 @@ const projectsList = [
     },
     {
         name: "Flask",
-        catchphrase: "My first website",
+        catchphrase: "A lightweight framework for web development with python",
         img: promission,
         link: "https://promissions.herokuapp.com/login", 
         github: "https://github.com/RaphaelHebert/promission",
-        description: "To pay a visit use the credentials: anymail@gmail.com, password: freepass my first website... wirtten in python, using Flask framework and some bootstrap, and a SQL database hosted on heroku and managed with SQLite. It intended to be a market place and provide  functionnalities to let English teachers manage their agenda, find work and publish their profile and to let agents manage a team of teachers, publich adds and find new teachers.. " ,
+        description: "Wirtten in python, using Flask framework and some bootstrap, and a SQL database hosted on heroku and managed with SQLite. It intended to be a market place and provide  functionnalities to let English teachers manage their agenda, find work and publish their profile and to let agents manage a team of teachers, publich adds and find new teachers.. " ,
         language: ["Python", "JavaScript", "HTML", "CSS"],
         type: "Data science",
     }

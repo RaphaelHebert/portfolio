@@ -47,6 +47,14 @@ const Flask = () => {
                             )            
                         })}
                     </div>
+                    <section>
+                        <p>Links and references to the project:
+                            <ul>
+                                <li><a href={project.link}>Promission website </a><span> &#40; you can use the credentials: <b>anymail@gmail.com</b>, password: <b>freepass</b> for a visit&#41;</span></li>
+                                <li><a href={project.github}>GitHub repository</a></li>
+                            </ul>
+                        </p>
+                    </section>
                     <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
                         <article>
                             {project.description}
@@ -59,8 +67,8 @@ const Flask = () => {
                     </section>
                     <section className="flex rowWrap justifySpaceEvenly alignItemsStart">
                         <article>
-                            As every moderns websites HTML5, CSS3 and JavaScript are used for front-end.
-                            Bootstrap library is used to leverage the work of other programmers and easily get nice components like menu, buttons and classes to make the website neat and responsive.
+                            As every modern websites HTML5, CSS3 and JavaScript are used for front-end.
+                            The Bootstrap library is used to leverage the work of other programmers and easily get nice components like menus, buttons and classes to make the website neat and responsive.
                             As a Flask website the back-end uses Jinja2 to render HTML in the front-end. Jinja2 is a templating language used by python developers. It looks a lot like HTML but can parse some logic &#40;for example looping over an array of text to render it as if you would a typed it in HTML&#41;.
                         </article>
                         <aside>
