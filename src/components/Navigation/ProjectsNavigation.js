@@ -51,6 +51,7 @@ const ProjectsNavigation = () => {
         <MenuItem id="NSDPY" className="customItem" onClick={handleClose}>PiPy Package</MenuItem>
         <MenuItem id="TamGiang" className="customItem" onClick={handleClose}>Data science</MenuItem>
         <MenuItem id="CodePen" className="customItem" onClick={handleClose}>CodePens</MenuItem>
+        <MenuItem id="CSS3" className="customItem" onClick={handleClose}>CSS animation</MenuItem>
         <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
         <MenuItem id="react" className="customItem" onClick={handleClose}>Web Dev - React</MenuItem>
       </Menu>
