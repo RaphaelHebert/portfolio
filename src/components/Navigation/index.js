@@ -9,7 +9,8 @@ import "../../app.css"
 
 const NavigationBar = () => {
     const navigate = useNavigate()
-    const handleClick = () => {
+    const handleClick = e => {
+        e.preventDefault();
         navigate('/', {replace: true})
     }
 

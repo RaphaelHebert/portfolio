@@ -11,7 +11,7 @@ const Social = () => {
     return (
             <nav className="navBar">
                 <ul className="flex rowNoWrap alignItemsCenter justifySpaceAround navList">
-                {/* TODO: make logo size responsive? */}
+                {/* TODO: make logo size responsive */}
                     <li><a href="https://github.com/RaphaelHebert/RaphaelHebert"><img src={github} alt="my github" width="50px"/></a></li>
                     <li><a href="https://codepen.io/raphaelhebert-the-scripter"><img src={codepen} alt="my codepen" width="50px"/></a></li>
                     <li><a href="https://twitter.com/Joe84196982"><img src={twitter} alt="my twitter" width="50px"/></a></li>

@@ -15,6 +15,7 @@ const ProjectsNavigation = () => {
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
+    event.preventDefault();
     setAnchorEl(event.currentTarget);
   };
 
