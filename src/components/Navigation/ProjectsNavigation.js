@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-import NestedMenuItem from "material-ui-nested-menu-item";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import "./navigation.css"
 import "../../app.css"
@@ -28,11 +28,6 @@ const ProjectsNavigation = () => {
   const handleClose = (event) => {
     setAnchorEl(null);
   };
-
-  const handleCloseSub = (event) => {
-    setSubAnchorEl(null);
-  };
-
 
   const handleMouseEnter = (event) => {
     event.preventDefault();
@@ -75,7 +70,7 @@ const ProjectsNavigation = () => {
         <MenuItem id="CodePen" className="customItem" onClick={handleClose} >CodePens</MenuItem>
         <MenuItem id="CSS3" className="customItem" onClick={handleClose}>CSS animation</MenuItem>
         <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
-        <MenuItem className="customItem" onClick={handleMouseEnter} style={{zIndex:0}}> Web Dev - React
+        <MenuItem className="customItem" onClick={handleMouseEnter} style={{zIndex:0}}> Web Dev - React <ArrowForwardIosIcon style={{color: "gray"}}/>
           <Menu
           
           
@@ -104,10 +99,5 @@ const ProjectsNavigation = () => {
     </div>
   );
 }
-// onMouseEnter={e => {
-//   setStyle({display: 'block'});
-// }}
-// onMouseLeave={e => {
-//   setStyle({display: 'none'})
-// }}
+
 export default ProjectsNavigation
