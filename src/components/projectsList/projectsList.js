@@ -2,6 +2,7 @@ import promission from '../projects/Flask/img/promission-overview.png'
 import pipy from '../projects/NSDPY/img/pypi.png'
 import CodePenLogo from '../projects/CodePen/img/svgLogo.js'
 import TamGiang from '../projects/TamGiang/img/tamGiangSizeClassFrequencies.png'
+import Snake from '../projects/Snake/img/snake.png'
 
 const projectsList = [
     {
@@ -23,6 +24,16 @@ const projectsList = [
         description: "Automatize the download of DNA sequences from NCBI, sort them according to their taxonomy and filter them with a gene name (provided as a regular expression)",
         languages: ["Python"],
         type: "package",
+    },
+    {
+        name: "Snake",
+        catchphrase: "A little website to play this classic game.",
+        img: Snake,
+        link: "https://snake-black.vercel.app/", 
+        github: "https://github.com/RaphaelHebert/snake",
+        description: "Made with React and Node.js, this little website let you play The Snake for free and even register to save your score and compete with the other players! " ,
+        language: ["React", "JavaScript", "HTML", "CSS", "Node.js", "SQLite3"],
+        type: "Web",
     },
     {
         name: "CodePen",

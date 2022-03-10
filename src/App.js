@@ -16,6 +16,7 @@ import Flask from "./components/projects/Flask";
 import Welcome from "./components/projects/Welcome";
 import Navigation from './components/Navigation';
 import Spinner from "./components/Spinner";
+import Snake from "./components/projects/Snake";
 
 import './app.css';
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="Flask" element={<Flask />} />
           <Route path="CSS3" element={<Welcome />} />
           <Route path="react" element={<Spinner />} />
+          <Route path="snake" element={<Snake />} />
         </Route>
       </Routes>
       <Social />
