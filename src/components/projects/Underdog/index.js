@@ -80,7 +80,7 @@ const Underdog = () => {
                         <div className={loaded.spinner}>
                             <Spinner/>
                         </div>
-                        <a href={project.link}><img className={loaded.img} src={underdogdevWebsite} alt="Underdogdevs website" onLoad={handleOnload}/> </a>  
+                        <a href={project.link}><img className={loaded.img} src={underdogdevWebsite} alt="Underdogdevs website" onLoad={handleOnload} width='100%'/> </a>  
                     </aside>
                 </section>
             </div>:

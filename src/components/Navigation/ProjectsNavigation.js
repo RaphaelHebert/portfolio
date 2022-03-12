@@ -25,19 +25,21 @@ const ProjectsNavigation = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (event) => {
-    setAnchorEl(null);
-  };
-
-  const handleMouseEnter = (event) => {
+  const handleClickSub = (event) => {
     event.preventDefault();
     setSubAnchorEl(event.currentTarget);
-  }
+  };
 
-  const handleMouseLeave = (event) => {
+  const handleClose = (event) => {
     event.preventDefault();
+    setAnchorEl(null);
+    handleCloseSub()
+  };
+
+  const handleCloseSub = (event) => {
     setSubAnchorEl(null);
-  }
+  };
+
 
   const nav = (event) => {
     event.target.id? navigate(`/projects/${event.target.id}`, {replace: true}): navigate('/', {replace: true})
@@ -60,21 +62,32 @@ const ProjectsNavigation = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        onClick={nav}
+        style={{zIndex:0}}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem id="NSDPY" className="customItem" onClick={handleClose} >PiPy Package</MenuItem>
-        <MenuItem id="TamGiang" className="customItem" onClick={handleClose} >Data science</MenuItem>
-        <MenuItem id="CodePen" className="customItem" onClick={handleClose} >CodePens</MenuItem>
-        <MenuItem id="CSS3" className="customItem" onClick={handleClose}>CSS animation</MenuItem>
-        <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
-        <MenuItem className="customItem" onClick={handleMouseEnter} style={{zIndex:0}}> Web Dev - React <ArrowForwardIosIcon style={{color: "gray"}}/>
-          <Menu
-          
-          
+        <div onClick={nav}>
+          <MenuItem id="NSDPY" className="customItem" onClick={handleClose} >PiPy Package</MenuItem>
+          <MenuItem id="TamGiang" className="customItem" onClick={handleClose} >Data science</MenuItem>
+          <MenuItem id="CodePen" className="customItem" onClick={handleClose} >CodePens</MenuItem>
+          <MenuItem id="CSS3" className="customItem" onClick={handleClose}>CSS animation</MenuItem>
+          <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
+        </div>
+        <MenuItem 
+          className="customItem noBottomBorder"
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClickSub}
+        > Web Dev - React <ArrowForwardIosIcon style={{color: "gray"}}/>
+        
+        </MenuItem>
+        
+        <Menu
+          id="basic-subMenu"
           anchorEl={subAnchorEl}
+          onClose={handleCloseSub}
           anchorOrigin={{
             vertical: 'center',
             horizontal: 'right',
@@ -89,12 +102,11 @@ const ProjectsNavigation = () => {
             'aria-labelledby': 'basic-button',
           }}
           >
-            <div onMouseLeave={handleMouseLeave}>
-              <MenuItem id="snake" onClick={handleClose}>Snake</MenuItem>
-              <MenuItem id="underdog" onClick={handleClose} >UnderdogDevs</MenuItem>
-            </div>
+          <div onClick={nav}>
+            <MenuItem id="snake" className="customItem" onClick={handleClose}>Snake</MenuItem>
+            <MenuItem id="underdog" className="customItem" onClick={handleClose} >UnderdogDevs</MenuItem>
+          </div>
           </Menu>
-        </MenuItem>
       </Menu>
     </div>
   );

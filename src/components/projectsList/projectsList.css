@@ -36,9 +36,9 @@ hover
     transition: color .3s;
 }
 
-.project:hover img {
+/* .project:hover img {
    opacity: 70%;
-}
+} */
 
 /* 
 ############################################################

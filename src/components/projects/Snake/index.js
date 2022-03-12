@@ -9,23 +9,23 @@ import "../../projectsList/projectsList.css"
 
 //images
 import snake from './img/snake.png';
-// import python from './img/python.png';
-// import ncbi from './img/ncbi.png';
-// import readTheDocs from './img/readTheDoc.png';
-// import colab from './img/colabgoogle.png';
-// import github from './img/github.png';
-// import softwareX from './img/softwareX.jpeg'
+const html5 = "https://upload.wikimedia.org/wikipedia/commons/8/80/HTML5_logo_resized.svg";
+const css3 = "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg";
+const JS = "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg";
+const React = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg";
+const Node = "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg";
+const SQLite3 = "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg";
 
 
-// const images = [
-//     pipy,
-//     python,
-//     ncbi,
-//     readTheDocs, 
-//     colab,
-//     github,
-//     softwareX
-// ]
+
+const images = [
+    html5,
+    css3,
+    JS,
+    React, 
+    Node,
+    SQLite3,
+]
 
 
 
@@ -50,11 +50,11 @@ const Snake = () => {
             <div className="flexColNoWrap main mainContainer">
                 <Intro project={project} />
                 <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-                    {/* {images.map( img => {
+                    {images.map( img => {
                         return(
-                            <img src={img} alt="logo" width="100px"/>
+                            <img src={img} alt="logo" width="8%"/>
                         )            
-                    })} */}
+                    })}
                 </div>
                 <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
                     <article className="flex colNoWrap justifySpaceEvenly">
@@ -74,7 +74,7 @@ const Snake = () => {
                         <div className={loaded.spinner}>
                             <Spinner/>
                         </div>
-                        <img className={loaded.img} src={snake} alt="snake playground" onLoad={handleOnload}/>   
+                        <a href={project.link}><img className={loaded.img} src={snake} alt="snake playground" onLoad={handleOnload} width='100%'/></a>
                     </aside>
                 </section>
             </div>:

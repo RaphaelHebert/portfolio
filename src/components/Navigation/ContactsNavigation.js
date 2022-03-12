@@ -46,7 +46,7 @@ const ContactsNavigation = () => {
         <MenuItem id="CodePen" className="customItem" onClick={handleClose}><a href="https://github.com/RaphaelHebert">GitHub </a></MenuItem>
         <MenuItem id="GitHub" className="customItem" onClick={handleClose}><a href="https://codepen.io/raphaelhebert-the-scripter">CodePen </a></MenuItem>
         <MenuItem id="LinkedIn" className="customItem" onClick={handleClose}><a href="https://linkedin.com/in/raphael-hebert">LinkedIn </a></MenuItem>
-        <MenuItem id="Twitter" className="customItem" onClick={handleClose}><a href="https://twitter.com/Joe84196982">Twitter </a></MenuItem>
+        <MenuItem id="Twitter" className="customItem noBottomBorder" onClick={handleClose}><a href="https://twitter.com/Joe84196982">Twitter </a></MenuItem>
       </Menu>
     </div>
   );
