@@ -61,9 +61,19 @@ const projectsList = [
         img: promission,
         link: "https://promissions.herokuapp.com/login", 
         github: "https://github.com/RaphaelHebert/promission",
-        description: "Wirtten in python, using Flask framework and some bootstrap, and a SQL database hosted on heroku and managed with SQLite. It intended to be a market place and provide  functionnalities to let English teachers manage their agenda, find work and publish their profile and to let agents manage a team of teachers, publich adds and find new teachers.. " ,
+        description: "Written in python, using Flask framework and some bootstrap, and a SQL database hosted on heroku and managed with SQLite. It intended to be a market place and provide  functionnalities to let English teachers manage their agenda, find work and publish their profile and to let agents manage a team of teachers, publich adds and find new teachers.. " ,
         language: ["Python", "JavaScript", "HTML", "CSS"],
         type: "Data science",
+    },
+    {
+        name: "Underdogdevs",
+        catchphrase: "opportunities in tech for people who might not otherwise get an opportunity",
+        img: "https://www.underdogdevs.org/images/underdogdevs-03.png",
+        link: "https://www.underdogdevs.org/", 
+        github: "https://github.com/RaphaelHebert/underdog-devs-fe-a",
+        description: "Final team project from Bloomtech institute of technology bootcamp" ,
+        language: ["React", "node", "HTML5", "CSS3", "Okta", "SQL", "Antd"],
+        type: "Web",
     }
 
 ]

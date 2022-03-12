@@ -17,6 +17,7 @@ import Welcome from "./components/projects/Welcome";
 import Navigation from './components/Navigation';
 import Spinner from "./components/Spinner";
 import Snake from "./components/projects/Snake";
+import Underdog from "./components/projects/Underdog"
 
 import './app.css';
 
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="CSS3" element={<Welcome />} />
           <Route path="react" element={<Spinner />} />
           <Route path="snake" element={<Snake />} />
+          <Route path="underdog" element={<Underdog />} />
         </Route>
       </Routes>
       <Social />

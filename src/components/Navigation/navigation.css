@@ -39,10 +39,15 @@
 }
 
 
-#basic-menu .customItem{
+#basic-menu .customItem, #basic-subMenu .customItem{
     border-bottom: 1px dashed #9e8d4f;
 }
 
-#basic-menu .customItem:last-of-type{
+#basic-subMenu .customItem:last-of-type{
     border-bottom: none;
 }
+
+.noBottomBorder{
+    border-bottom: none;
+} 
+
