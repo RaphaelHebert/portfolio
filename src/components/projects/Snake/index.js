@@ -74,7 +74,7 @@ const Snake = () => {
                         <div className={loaded.spinner}>
                             <Spinner/>
                         </div>
-                        <a href={project.link}><img className={loaded.img} src={snake} alt="snake playground" onLoad={handleOnload}/></a>
+                        <a href={project.link}><img className={loaded.img} src={snake} alt="snake playground" onLoad={handleOnload} width='100%'/></a>
                     </aside>
                 </section>
             </div>:

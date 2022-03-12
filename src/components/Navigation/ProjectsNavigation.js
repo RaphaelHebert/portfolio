@@ -31,22 +31,15 @@ const ProjectsNavigation = () => {
   };
 
   const handleClose = (event) => {
+    event.preventDefault();
     setAnchorEl(null);
+    handleCloseSub()
   };
 
   const handleCloseSub = (event) => {
     setSubAnchorEl(null);
   };
 
-  const handleMouseEnter = (event) => {
-    event.preventDefault();
-    setSubAnchorEl(event.currentTarget);
-  }
-
-  const handleMouseLeave = (event) => {
-    event.preventDefault();
-    setSubAnchorEl(null);
-  }
 
   const nav = (event) => {
     event.target.id? navigate(`/projects/${event.target.id}`, {replace: true}): navigate('/', {replace: true})
@@ -79,7 +72,7 @@ const ProjectsNavigation = () => {
           <MenuItem id="TamGiang" className="customItem" onClick={handleClose} >Data science</MenuItem>
           <MenuItem id="CodePen" className="customItem" onClick={handleClose} >CodePens</MenuItem>
           <MenuItem id="CSS3" className="customItem" onClick={handleClose}>CSS animation</MenuItem>
-          <MenuItem id="flask" className="customItem" onMouseOver={handleCloseSub} onClick={handleClose}>Web Dev - Flask</MenuItem>
+          <MenuItem id="flask" className="customItem" onClick={handleClose}>Web Dev - Flask</MenuItem>
         </div>
         <MenuItem 
           className="customItem noBottomBorder"
@@ -87,7 +80,6 @@ const ProjectsNavigation = () => {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickSub}
-          
         > Web Dev - React <ArrowForwardIosIcon style={{color: "gray"}}/>
         
         </MenuItem>
@@ -110,8 +102,10 @@ const ProjectsNavigation = () => {
             'aria-labelledby': 'basic-button',
           }}
           >
-            <MenuItem id="snake" className="customItem" onClick={handleCloseSub, handleClose}>Snake</MenuItem>
-            <MenuItem id="underdog" className="customItem" onClick={handleCloseSub, handleClose} >UnderdogDevs</MenuItem>
+          <div onClick={nav}>
+            <MenuItem id="snake" className="customItem" onClick={handleClose}>Snake</MenuItem>
+            <MenuItem id="underdog" className="customItem" onClick={handleClose} >UnderdogDevs</MenuItem>
+          </div>
           </Menu>
       </Menu>
     </div>
