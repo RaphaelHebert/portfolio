@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import Spinner from '../../Spinner'
 import Intro from '../../intro'
 import projectsList from "../../projectsList/projectsList";
+
 import "../projects.css";
 import "../../../app.css"
 import "../../projectsList/projectsList.css"
+
 //images
 import pipy from './img/pypi.png';
 import python from './img/python.png';
@@ -63,17 +65,16 @@ const NSDPY = () => {
                         and sort the downloaded sequences according to their taxonomy. /n NCBI is available on <a href="https://github.com/RaphaelHebert/nsdpy">GitHub</a> or can be installed as a package
                         from the PyPI website to be used directly in the terminal and included in a pipeline.
                         It is also available on Google Colab.
-                        The documentation is available on readTheDocs and a
-                        paper is on its way to be published in softwareX journal.
+                        The documentation is available on readTheDocs and the related paper is published on sofwareX magazine
                         </p>
                         <p>Links to NSDPY references and documentation:
                             <ul>
+                                <li><a href="https://authors.elsevier.com/sd/article/S235271102200036X">NSDPY paper on SofwareX</a></li>
                                 <li><a href="https://github.com/RaphaelHebert/nsdpy">GitHub repository</a></li>
                                 <li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li>
                                 <li><a href="https://pypi.org/project/nsdpy/">PyPI</a></li>
                                 <li><a href="https://colab.research.google.com/drive/1UmxzRc_k5sNeQ2RPGe29nWR_1_0FRPkq" >Google Colab</a></li>
                                 <li><a href="https://nsdpy.readthedocs.io/en/latest/">readTheDocs</a></li>
-                                <li><a href="https://www.journals.elsevier.com/softwarex">softwareX journal</a></li>
                             </ul>
                         </p>
                     </article>
