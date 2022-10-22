@@ -6,7 +6,7 @@ import projectsList from "../../projectsList/projectsList";
 import "../projects.css";
 import "../../../app.css";
 import "../../projectsList/projectsList.css";
-import underdogdevWebsite from "./img/underdogdevWebsite.png";
+import Projects from "../../projectsList";
 
 //images
 const html5 =
@@ -15,23 +15,39 @@ const css3 =
   "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg";
 const JS =
   "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg";
+const TS =
+  "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg";
 const React =
   "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg";
 const Node =
   "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg";
-const underdog = "https://www.underdogdevs.org/images/underdogdevs-03.png";
-const okta =
-  "https://upload.wikimedia.org/wikipedia/commons/5/5c/Okta_logo.svg";
-const antd =
-  "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
-const trello =
-  "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg";
+const MUI =
+  "https://upload.wikimedia.org/wikipedia/commons/d/dc/Logo_material_design.svg";
 const slack =
   "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg";
+const Notion =
+  "https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg";
+const firebase =
+  "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg";
+const redux =
+  "https://upload.wikimedia.org/wikipedia/commons/3/30/Redux_Logo.png";
+const saga = "https://cdn.worldvectorlogo.com/logos/redux-saga.svg";
 
 // TODO : make the page the Kagyoaid page
 
-const images = [React, Node, okta, antd, slack, trello];
+const images = [
+  React,
+  Node,
+  html5,
+  css3,
+  JS,
+  TS,
+  MUI,
+  Notion,
+  redux,
+  saga,
+  slack,
+];
 
 const Kagyoaid = () => {
   // TODO: get the project name from url
@@ -43,7 +59,7 @@ const Kagyoaid = () => {
 
   useEffect(() => {
     setProject(
-      projectsList.filter((project) => project.name === "Underdogdevs")[0]
+      projectsList.filter((project) => project.name === "Kagyoaid")[0]
     );
   }, []);
 
@@ -63,44 +79,40 @@ const Kagyoaid = () => {
           </div>
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
-              <p>
-                The final team project for the Bloom Institute of Technology Web
-                development bootcamp. I realized some forms for signing up and
-                logging with Antd and implemented the authentification front-end
-                with Okta.
-              </p>
+              <p>A twitter like Social Media Network</p>
               <p>We worked as a team using Slack, Trello and GitHub</p>
               <p>
-                Links to the Underdogdevs website and repository:
+                Links to the {project.name} website and repository:
                 <ul>
                   <li>
                     <a href={project.link}>the website</a>
                   </li>
-                  <li>
-                    <a href={project.github}>my GitHub fork</a>
-                  </li>
+                  {project.github && (
+                    <li>
+                      <a href={project.github}>my GitHub fork</a>
+                    </li>
+                  )}
                 </ul>
               </p>
             </article>
             <aside className="flex colNoWrap justifyCenter">
-              <h2>Underdogdevs website</h2>
+              <h2>{project.name} website</h2>
               <div className={loaded.spinner}>
                 <Spinner />
               </div>
               <a href={project.link}>
-                <img
+                {/* <img
                   className={loaded.img}
                   src={underdogdevWebsite}
-                  alt="Underdogdevs website"
+                  alt={`${project.name} website`}
                   onLoad={handleOnload}
                   width="100%"
-                />{" "}
+                />{" "} */}
               </a>
             </aside>
           </section>
         </div>
       ) : (
-        // TODO: put a spinner
         <Spinner />
       )}
     </>
