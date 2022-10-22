@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import {
   Route,
   Routes,
-  Link,
 } from 'react-router-dom';
 import useLocalStorage from "./hooks/useLocalStorage"
 

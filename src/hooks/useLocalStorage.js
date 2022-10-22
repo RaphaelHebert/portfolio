@@ -6,7 +6,7 @@ const useLocalStorage = (propertyName, defaultValue) => {
             const value = window.localStorage.getItem(propertyName);
             if(value){
                 return JSON.parse(value);
-            }else{
+            } else {
                 window.localStorage.setItem(propertyName, JSON.stringify(defaultValue));
                 return defaultValue;
             }
