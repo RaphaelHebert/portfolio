@@ -35,19 +35,7 @@ const saga = "https://cdn.worldvectorlogo.com/logos/redux-saga.svg";
 
 // TODO : make the page the Kagyoaid page
 
-const images = [
-  React,
-  Node,
-  html5,
-  css3,
-  JS,
-  TS,
-  MUI,
-  Notion,
-  redux,
-  saga,
-  slack,
-];
+const images = [React, Node, firebase, TS, MUI, Notion, redux, saga];
 
 const Kagyoaid = () => {
   // TODO: get the project name from url
