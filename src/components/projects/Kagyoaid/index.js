@@ -32,10 +32,11 @@ const firebase =
 const redux =
   "https://upload.wikimedia.org/wikipedia/commons/3/30/Redux_Logo.png";
 const saga = "https://cdn.worldvectorlogo.com/logos/redux-saga.svg";
-
+const bitbucket =
+  "https://upload.wikimedia.org/wikipedia/commons/3/32/Atlassian_Bitbucket_Logo.png";
 // TODO : make the page the Kagyoaid page
 
-const images = [React, Node, firebase, TS, MUI, Notion, redux, saga];
+const images = [React, Node, firebase, TS, MUI, Notion, redux, saga, bitbucket];
 
 const Kagyoaid = () => {
   // TODO: get the project name from url
@@ -68,7 +69,7 @@ const Kagyoaid = () => {
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
               <p>A twitter like Social Media Network</p>
-              <p>We worked as a team using Slack, Trello and GitHub</p>
+              <p>Small team, outsourced for our client</p>
               <p>
                 Links to the {project.name} website and repository:
                 <ul>
@@ -88,14 +89,17 @@ const Kagyoaid = () => {
               <div className={loaded.spinner}>
                 <Spinner />
               </div>
-              <a href={project.link}>
-                {/* <img
+              <a
+                href={project.link}
+                style={{ background: "white", padding: ".5em" }}
+              >
+                <img
                   className={loaded.img}
-                  src={underdogdevWebsite}
+                  src={project.img}
                   alt={`${project.name} website`}
                   onLoad={handleOnload}
                   width="100%"
-                />{" "} */}
+                />{" "}
               </a>
             </aside>
           </section>
