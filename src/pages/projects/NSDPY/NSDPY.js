@@ -1,23 +1,32 @@
 import { useState, useEffect } from "react";
 
-import Spinner from "../../../components/Spinner";
-import Intro from "../../../components/intro";
-import projectsList from "../../../components/projectsList/projectsList";
+//local imports
+import { projectsList } from "../../../constants";
+import { Spinner, Intro, LogoBar } from "../../../components";
 
+//css imports
 import "../projects.css";
 import "../../../app.css";
 import "../../../components/projectsList/projectsList.css";
 
 //images
-import pipy from "./img/pypi.png";
-import python from "./img/python.png";
-import ncbi from "./img/ncbi.png";
-import readTheDocs from "./img/readTheDoc.png";
-import colab from "./img/colabgoogle.png";
-import github from "./img/github.png";
-import softwareX from "./img/softwareX.jpeg";
+// import pipy from "./img/pypi.png";
+// import python from "./img/python.png";
+// import ncbi from "./img/ncbi.png";
+// import readTheDocs from "./img/readTheDoc.png";
+// import colab from "./img/colabgoogle.png";
+// import github from "./img/github.png";
+// import softwareX from "./img/softwareX.jpeg";
 
-const images = [pipy, python, ncbi, readTheDocs, colab, github, softwareX];
+const techStack = [
+  "Pipy",
+  "Python",
+  "NCBI",
+  "ReadTheDocs",
+  "Colab",
+  "GitHub",
+  "SoftwareX",
+];
 
 const NSDPY = () => {
   // TODO: get the project name from url
@@ -40,11 +49,7 @@ const NSDPY = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {images.map((img) => {
-              return <img src={img} alt="logo" width="100px" />;
-            })}
-          </div>
+          <LogoBar techStack={techStack} />
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
               <p>

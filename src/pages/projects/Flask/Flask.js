@@ -1,35 +1,32 @@
 import { useState, useEffect } from "react";
+
+//localImports
+import { projectsList } from "../../../constants";
+import { Intro, LogoBar } from "../../../components";
+
+// css imports
 import "../projects.css";
 import "../../../app.css";
 
-import projectsList from "../../../components/projectsList/projectsList";
-import Intro from "../../../components/intro";
-
+// images
 import bootstrapComponent from "./img/promission-bootstrap.png";
-import contact from "./img/promission-contact.png";
+//import contact from "./img/promission-contact.png";
 import login from "./img/promission-login.png";
 import newTask from "./img/promission-newTask.png";
 import overview from "./img/promission-overview.png";
-import profiles from "./img/promission-profiles.png";
+//import profiles from "./img/promission-profiles.png";
 import publishAdd from "./img/promission-publishAdd.png";
 import seeAdds from "./img/promission-seeAdds.png";
 
-const python =
-  "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white";
-const flask =
-  "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white";
-const mysql =
-  "https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white";
-const bootstrap =
-  "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white";
-const html =
-  "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white";
-const css =
-  "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white";
-const heroku =
-  "https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white";
-
-const images = [python, flask, mysql, bootstrap, html, css, heroku];
+const techStack = [
+  "Python",
+  "Flask",
+  "MySQL",
+  "Bootstrap",
+  "HTML5",
+  "CSS3",
+  "Heroku",
+];
 
 const Flask = () => {
   // TODO: get the project name from url
@@ -44,11 +41,7 @@ const Flask = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {images.map((img) => {
-              return <img src={img} alt="logo" width="100px" />;
-            })}
-          </div>
+          <LogoBar techStack={techStack} />
           <section>
             <p>
               Links and references to the project:

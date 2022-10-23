@@ -1,35 +1,18 @@
 import { useState, useEffect } from "react";
 
-import Spinner from "../../../components/Spinner";
-import Intro from "../../../components/intro";
-import projectsList from "../../../components/projectsList/projectsList";
+// local imports
+import { Spinner, Intro, LogoBar } from "../../../components";
+import { projectsList } from "../../../constants";
+
+// css imports
 import "../projects.css";
 import "../../../app.css";
 import "../../../components/projectsList/projectsList.css";
+
+// images
 import underdogdevWebsite from "./img/underdogdevWebsite.png";
 
-//images
-const html5 =
-  "https://upload.wikimedia.org/wikipedia/commons/8/80/HTML5_logo_resized.svg";
-const css3 =
-  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg";
-const JS =
-  "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg";
-const React =
-  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg";
-const Node =
-  "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg";
-const underdog = "https://www.underdogdevs.org/images/underdogdevs-03.png";
-const okta =
-  "https://upload.wikimedia.org/wikipedia/commons/5/5c/Okta_logo.svg";
-const antd =
-  "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
-const trello =
-  "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg";
-const slack =
-  "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg";
-
-const images = [React, Node, okta, antd, slack, trello];
+const techStack = ["React", "Node", "Okta", "Antd", "Slack", "Trello"];
 
 const Underdog = () => {
   // TODO: get the project name from url
@@ -54,11 +37,7 @@ const Underdog = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {images.map((img) => {
-              return <img src={img} alt="logo" width="8%" />;
-            })}
-          </div>
+          <LogoBar techStack={techStack} />
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
               <p>

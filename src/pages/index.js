@@ -1,3 +1,5 @@
+// Barrel for pages folder
+
 export { default as CodePen } from "./projects/CodePen/CodePen";
 export { default as Kagyoaid } from "./projects/Kagyoaid/Kagyoaid";
 export { default as Snake } from "./projects/Snake/Snake";

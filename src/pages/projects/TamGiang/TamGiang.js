@@ -1,28 +1,22 @@
 import { useState, useEffect } from "react";
 
-import projectsList from "../../../components/projectsList/projectsList";
+//local imports
+import { projectsList } from "../../../constants";
+import { Intro, LogoBar } from "../../../components";
+
+// css imports
 import "../projects.css";
 import "../../../app.css";
 
-import Intro from "../../../components/intro";
-import ird from "./img/logos/ird.png";
-import danangUniversity from "./img/logos/danangUniversity.png";
+// images
 import avgLength from "./img/tamGiangAvgLength.png";
-import histogram from "./img/tamGiangHistogram.png";
+//import histogram from "./img/tamGiangHistogram.png";
 import frequencie from "./img/tamGiangLengthFrequencies.png";
 import distribution from "./img/tamGiangSizeClassFrequencies.png";
 
-const r =
-  "https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white";
-const colab =
-  "https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252";
-const python =
-  "https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue";
-const ubuntu =
-  "https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white";
-const images = [ird, danangUniversity, r, colab, python, ubuntu];
+const techStack = ["IRD", "DanangUniversity", "r", "Colab", "Python", "Ubuntu"];
 
-const displays = [avgLength, histogram, frequencie, distribution];
+//const displays = [avgLength, histogram, frequencie, distribution];
 
 const TamGiang = () => {
   const [project, setProject] = useState([]);
@@ -38,11 +32,7 @@ const TamGiang = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {images.map((img) => {
-              return <img src={img} alt="logo" width="100px" />;
-            })}
-          </div>
+          <LogoBar techStack={techStack} />
           <section>
             <div className="TamGiang">
               <p>

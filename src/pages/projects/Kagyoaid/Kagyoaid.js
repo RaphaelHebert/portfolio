@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 
 //local imports
-import Spinner from "../../../components/Spinner";
-import Intro from "../../../components/intro";
-import projectsList from "../../../components/projectsList/projectsList";
+import { projectsList } from "../../../constants";
+import { LogoBar, Intro, Spinner } from "../../../components";
+
+// css imports
 import "../projects.css";
 import "../../../app.css";
 import "../../../components/projectsList/projectsList.css";
-import Projects from "../../../components/projectsList";
-import { logos } from "../../../constants";
 
 //images
 const techStack = [
@@ -47,19 +46,7 @@ const Kagyoaid = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {techStack.map(
-              (item) =>
-                logos[item].imgLink &&
-                logos[item].name && (
-                  <img
-                    src={logos[item].imgLink}
-                    alt={`${logos[item].name} logo`}
-                    width="8%"
-                  />
-                )
-            )}
-          </div>
+          <LogoBar techStack={techStack} />
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
               <p>A twitter like Social Media Network</p>

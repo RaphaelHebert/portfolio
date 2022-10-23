@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 
-import Spinner from "../../../components/Spinner";
-import Intro from "../../../components/intro";
-import projectsList from "../../../components/projectsList/projectsList";
+// local imports
+import { Spinner, Intro, LogoBar } from "../../../components";
+import { projectsList } from "../../../constants";
+
+// css imports
 import "../projects.css";
 import "../../../app.css";
 import "../../../components/projectsList/projectsList.css";
@@ -12,20 +14,7 @@ import snake from "./img/snake.png";
 import topTen from "./img/topTen.png";
 import signIn from "./img/signIn.png";
 
-const html5 =
-  "https://upload.wikimedia.org/wikipedia/commons/8/80/HTML5_logo_resized.svg";
-const css3 =
-  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg";
-const JS =
-  "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg";
-const React =
-  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg";
-const Node =
-  "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg";
-const SQLite3 =
-  "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg";
-
-const images = [html5, css3, JS, React, Node, SQLite3];
+const techStack = ["HTML5", "CSS3", "JS", "React", "Node", "Sqlite"];
 
 const Snake = () => {
   // TODO: get the project name from url
@@ -48,11 +37,7 @@ const Snake = () => {
       {project ? (
         <div className="flexColNoWrap main mainContainer">
           <Intro project={project} />
-          <div className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter logos">
-            {images.map((img) => {
-              return <img src={img} alt="logo" width="8%" />;
-            })}
-          </div>
+          <LogoBar techStack={techStack} />
           <section className="flex rowWrap justifySpaceEvenly alignContentCenter alignItemsCenter alignContentStretch logos">
             <article className="flex colNoWrap justifySpaceEvenly">
               <p>
